@@ -1,0 +1,36 @@
+/* ProgressBar.css */
+.progress-bar-container {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .progress-label {
+    display: block;
+    color: #D6E8EE;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .progress-bar-background {
+    width: 100%;
+    background-color: #97CAD8;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  
+  .progress-bar-fill {
+    height: 10px;
+    background-color: #018ABE;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    transition: width 0.5s ease-in-out;
+  }
+  
+  .progress-value {
+    padding: 0 5px;
+    color: #001B48;
+    font-weight: bold;
+  }
+  

@@ -1,0 +1,38 @@
+/* Ratings.css */
+.ratings-container {
+    background-color: #02457A; /* Couleur d'arrière-plan bleu foncé pour correspondre au thème */
+    border: 4px solid #97CAD8; /* Bordure avec une couleur bleu clair pour contraster */
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 20px;
+    margin: 20px 0; /* Espacement autour du conteneur pour une meilleure visibilité */
+    color: #D6E8EE; /* Couleur du texte en accord avec le thème */
+  }
+  
+  .progress-bar-container {
+    margin-bottom: 15px; /* Espace entre chaque barre de progression pour éviter le surpeuplement */
+  }
+  
+  .progress-label {
+    font-size: 16px; /* Taille de police appropriée pour les labels */
+    margin-bottom: 5px; /* Espace entre le label et la barre */
+    color: inherit; /* Hérite la couleur du conteneur parent */
+  }
+  
+  .progress-bar-background {
+    background-color: #97CAD8; /* Couleur de fond de la barre de progression (arrière-plan) */
+    border-radius: 5px; /* Arrondit les coins de la barre de fond */
+  }
+  
+  .progress-bar-fill {
+    background-color: #018ABE; /* Couleur de remplissage pour la progression */
+    height: 10px; /* Hauteur de la barre de progression */
+    border-radius: 5px; /* Arrondit les coins de la barre de remplissage */
+  }
+  
+  .progress-value {
+    color: #001B48; /* Couleur du texte pour la valeur de progression, assurant une bonne visibilité */
+    margin-left: 10px; /* Espace entre le bord de la barre remplie et le texte */
+    font-weight: bold; /* Met en gras le pourcentage pour une meilleure distinction */
+  }
+  

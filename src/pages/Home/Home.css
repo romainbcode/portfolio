@@ -1,0 +1,20 @@
+/* Home.css */
+.home {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .project-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Centrer les éléments horizontalement et répartir l'espace uniformément */
+    max-width: 1200px; /* Ajuste cette valeur selon la largeur de ton écran */
+  }
+  
+  .project-card {
+    margin: 10px;
+    flex: 1 1 40%; /* Chaque card prendra environ 40% de la largeur du conteneur project-list */
+  }
+  
