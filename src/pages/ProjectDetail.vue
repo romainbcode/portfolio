@@ -37,6 +37,10 @@
       </div>
     </div>
 
+    <div>
+      <!--<Video :mp4="require(`@/assets/project_video/video.mp4`)" />-->
+    </div>
+
     <div
       class="fixed right-10 top-1/2 transform -translate-y-1/2 flex flex-col space-y-4"
     >
@@ -54,6 +58,7 @@ import Divider from "primevue/divider";
 
 import Projectlabel from "@/components/project/Projectlabel.vue";
 import Projecttool from "@/components/project/Projecttool.vue";
+import Video from "@/components/Video.vue";
 
 import { Camera } from "lucide-vue-next";
 
@@ -62,6 +67,7 @@ export default {
     Projectlabel,
     Projecttool,
     Camera,
+    Video,
   },
   setup() {
     const projectStore = useProjectStore();
