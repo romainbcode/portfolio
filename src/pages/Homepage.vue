@@ -44,13 +44,21 @@
     </div>
     <div class="my-4 grid gap-4 flex justify-center">
       <Project
+        :id="1"
         :photo="pari"
         :label="'web'"
         :title="'Paris sportif'"
         :description="'Paris sportif avec une monnaie virtuelle remplis de données récupérés via web scrapping'"
-        :tools="[{ name: ToolName.VueJS }, { name: ToolName.NodeJS }]"
+        :tools="[
+          { name: ToolName.VueJS },
+          { name: ToolName.NodeJS },
+          { name: ToolName.NodeJS },
+          { name: ToolName.NodeJS },
+          { name: ToolName.NodeJS },
+        ]"
       />
       <Project
+        :id="2"
         :photo="PFE"
         :label="'web'"
         :title="`Projet fin d'étude`"

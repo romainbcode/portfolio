@@ -1,5 +1,6 @@
 import Aura from "@primevue/themes/aura";
-import { Button, Card } from "primevue";
+import { createPinia } from "pinia";
+import { Button, Card, Divider } from "primevue";
 import PrimeVue from "primevue/config";
 import Tooltip from "primevue/tooltip";
 import { createApp } from "vue";
@@ -7,6 +8,7 @@ import App from "./App.vue";
 import "./index.css";
 import router from "./router";
 
+const pinia = createPinia();
 const app = createApp(App);
 
 app.component("Button", Button);
@@ -17,6 +19,8 @@ app
     },
   })
   .use(router)
+  .use(pinia)
   .component("Card", Card)
+  .component("Divider", Divider)
   .directive("tooltip", Tooltip)
   .mount("#app");

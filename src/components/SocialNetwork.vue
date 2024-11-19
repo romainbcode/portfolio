@@ -52,7 +52,11 @@
     </li>
   </ul>
 </template>
-<script></script>
+<script>
+export default {
+  name: "SocialNetwork",
+};
+</script>
 <style>
 ul {
   list-style: none;

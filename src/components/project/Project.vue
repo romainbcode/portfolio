@@ -4,6 +4,7 @@
     :class="hoverStyle"
     @mouseenter="isHovered = true"
     @mouseleave="isHovered = false"
+    @click="navigateToDetail"
   >
     <Projectlabel
       :label="label"
@@ -35,13 +36,18 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import { useRouter } from "vue-router";
+
 import { ToolName } from "../../enums/ToolColor";
 
 import Projectlabel from "@/components/project/Projectlabel.vue";
 import Projecttool from "@/components/project/Projecttool.vue";
 import ProjectButtonGithub from "@/components/project/ProjectButtonGithub.vue";
 import TruncatedDescription from "@/components/TruncatedDescription.vue";
+
+import { useProjectStore } from "@/stores/projectStore";
+
 export default {
   name: "Project",
   components: {
@@ -51,6 +57,10 @@ export default {
     TruncatedDescription,
   },
   props: {
+    id: {
+      type: String,
+      required: true,
+    },
     label: {
       type: String,
       required: true,
@@ -84,8 +94,30 @@ export default {
       };
     },
   },
-  setup() {
-    return { ToolName };
+  setup(props) {
+    const router = useRouter();
+    const projectStore = useProjectStore();
+
+    const navigateToDetail = () => {
+      projectStore.setCurrentProject({
+        logo: props.photo,
+        titre: props.title,
+        label: props.label,
+        tools: props.tools,
+        descriptionObjectifs: props.description,
+        descriptionCompetences:
+          props.tools?.map((tool) => (tool as any).name).join(", ") || "",
+      });
+
+      router.push({
+        name: "ProjectDetail",
+        params: { id: props.id },
+      });
+    };
+
+    return {
+      navigateToDetail,
+    };
   },
   data() {
     return {

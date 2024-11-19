@@ -1,6 +1,6 @@
 <template>
   <div
-    class="px-5 py-0.5 rounded-xl text-white transition-all duration-500 ease-out"
+    class="inline-block px-5 py-0.5 rounded-xl text-white transition-all duration-500 ease-out"
     :class="[bgColorClass]"
     :style="animationStyle"
   >

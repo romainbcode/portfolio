@@ -1,7 +1,7 @@
 <!-- src/App.vue -->
 <template>
   <div>
-    <!--<Navbar /> -->
+    <Navbar />
     <main class="pt-20">
       <RouterView />
     </main>
