@@ -11,13 +11,13 @@ export enum ToolName {
 }
 
 export enum ToolColor {
-  VueJS = "bg-blue-200",
-  ReactJS = "bg-blue-300",
-  AngularJS = "bg-blue-400",
-  NodeJS = "bg-red-200",
-  SpringBoot = "bg-red-300",
-  Quarkus = "bg-red-400",
-  PostgreSQL = "bg-green-200",
-  MongoDB = "bg-green-300",
-  Redis = "bg-green-400",
+  VueJS = "bg-emerald-400/[.30]",
+  ReactJS = "bg-teal-400/[.30]",
+  AngularJS = "bg-red-500/[.30]",
+  NodeJS = "bg-green-400/[.30]",
+  SpringBoot = "bg-lime-400/[.30]",
+  Quarkus = "bg-sky-400/[.30]",
+  PostgreSQL = "bg-sky-400/[.30]",
+  MongoDB = "bg-lime-400/[.30]",
+  Redis = "bg-red-400/[.30]",
 }

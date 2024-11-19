@@ -1,4 +1,12 @@
-<template></template>
+<template>
+  <div
+    class="text-sm rounded-xl px-3 py-0.5 text-black"
+    v-tooltip.bottom="typeTool"
+    :class="backgroundColor"
+  >
+    {{ name }}
+  </div>
+</template>
 
 <script lang="ts">
 import { SkillName, SkillColor } from "@/enums/SkillColor";
@@ -6,7 +14,7 @@ export default {
   name: "Skill",
   props: {
     name: {
-      type: ToolName,
+      type: SkillName,
       required: true,
     },
   },
@@ -26,6 +34,24 @@ export default {
           return SkillColor.Git;
         case SkillName.Figma:
           return SkillColor.Figma;
+      }
+    },
+    typeTool() {
+      switch (this.name) {
+        case SkillName.AGILE:
+          return "méthodologie";
+        case SkillName.PipelineGitlab:
+          return "devops";
+        case SkillName.Trello:
+          return "gestion de projet";
+        case SkillName.Docker:
+          return "devops";
+        case SkillName.Git:
+          return "versionning";
+        case SkillName.Figma:
+          return "design";
+        default:
+          return "";
       }
     },
   },

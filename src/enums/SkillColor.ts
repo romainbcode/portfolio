@@ -8,10 +8,10 @@ export enum SkillName {
 }
 
 export enum SkillColor {
-  AGILE = "#4A90E2", // Bleu clair
-  PipelineGitlab = "#F05A28", // Rouge GitLab
-  Trello = "#0079BF", // Bleu Trello
-  Docker = "#2496ED", // Bleu Docker
-  Git = "#F34F29", // Orange Git
-  Figma = "#F24E1E", // Violet Figma
+  AGILE = "bg-sky-500/[.30]",
+  PipelineGitlab = "bg-orange-400/[.30]",
+  Trello = "bg-sky-300/[.30]",
+  Docker = "bg-sky-300/[.30]",
+  Git = "bg-orange-600/[.30]",
+  Figma = "bg-violet-300/[.30]",
 }

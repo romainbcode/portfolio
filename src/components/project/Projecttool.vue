@@ -64,7 +64,7 @@ export default {
         case ToolName.Redis:
           return "base de données";
         default:
-          return "?";
+          return "";
       }
     },
   },

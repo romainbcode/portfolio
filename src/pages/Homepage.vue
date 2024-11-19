@@ -29,16 +29,13 @@
           <div class="px-4"></div>
         </Vue3Marquee>
         <div class="my-4"></div>
-        <Vue3Marquee direction="reverse" duration="14">
+        <Vue3Marquee direction="reverse" duration=14 pauseOnHover="true">
           <div class="flex space-x-8">
-            <div v-for="(softskill, index) in softskills" :key="index">
-              <Softskill
-                :title="softskill.title"
-                :color="softskill.color"
-                :borderColor="softskill.borderColor"
-              />
+            <div v-for="(skill, index) in skills" :key="index">
+              <Skill :name="skill.name" />
             </div>
           </div>
+          <div class="px-4"></div>
         </Vue3Marquee>
       </div>
     </div>
@@ -87,8 +84,10 @@ import PFE from "@/assets/project_logo/PFE.png";
 import Project from "@/components/project/Project.vue";
 import ProjectTool from "@/components/project/Projecttool.vue";
 import Softskill from "@/components/skill/Softskill.vue";
+import Skill from "@/components/skill/Skill.vue";
 
 import { ToolName } from "@/enums/ToolColor";
+import { SkillName } from "@/enums/SkillColor";
 
 import SocialNetwork from "@/components/SocialNetwork.vue";
 
@@ -102,6 +101,7 @@ export default {
     Vue3Marquee,
     Project,
     Softskill,
+    Skill,
     ProjectTool,
     SocialNetwork,
   },
@@ -135,6 +135,26 @@ export default {
         },
         {
           name: ToolName.Redis,
+        },
+      ],
+      skills: [
+        {
+          name: SkillName.AGILE,
+        },
+        {
+          name: SkillName.PipelineGitlab,
+        },
+        {
+          name: SkillName.Trello,
+        },
+        {
+          name: SkillName.Docker,
+        },
+        {
+          name: SkillName.Git,
+        },
+        {
+          name: SkillName.Figma,
         },
       ],
     };
