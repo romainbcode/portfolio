@@ -20,7 +20,7 @@
     </div>
     <div class="flex justify-center">
       <div class="my-20 w-[60%]">
-        <Vue3Marquee direction="normal" duration="15" pauseOnHover="true">
+        <Vue3Marquee direction="normal" duration=15 pauseOnHover="true">
           <div class="flex space-x-8">
             <div v-for="(softskill, index) in softskills" :key="index">
               <ProjectTool :name="softskill.name" />
@@ -83,7 +83,6 @@ import PFE from "@/assets/project_logo/PFE.png";
 
 import Project from "@/components/project/Project.vue";
 import ProjectTool from "@/components/project/Projecttool.vue";
-import Softskill from "@/components/skill/Softskill.vue";
 import Skill from "@/components/skill/Skill.vue";
 
 import { ToolName } from "@/enums/ToolColor";
@@ -100,7 +99,6 @@ export default {
     Linkedin,
     Vue3Marquee,
     Project,
-    Softskill,
     Skill,
     ProjectTool,
     SocialNetwork,

@@ -45,7 +45,7 @@
       class="fixed right-10 top-1/2 transform -translate-y-1/2 flex flex-col space-y-4"
     >
       <button class="button">
-        <Camera class="screenIcon" color="black" />
+        <Camera class="screenIcon" color="black" size="25"/>
       </button>
     </div>
   </div>
@@ -106,7 +106,6 @@ export default {
 }
 
 .screenIcon {
-  width: 12px;
   transition-duration: 0.3s;
 }
 
