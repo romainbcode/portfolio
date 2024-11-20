@@ -22,12 +22,21 @@
     <div class="w-3/4 flex flex-col align-start justify-center my-1 mx-4">
       <h2 class="text-xl font-bold mb-2 text-4xl">{{ title }}</h2>
       <TruncatedDescription :description="description" />
-      <div class="flex flex-row space-x-2">
-        <Projecttool
-          v-for="(tool, index) in tools"
-          :key="index"
-          :name="tool.name"
-        />
+      <div class="flex flex-col space-y-2">
+        <div class="flex flex-row space-x-2">
+          <Projecttool
+            v-for="(tool, index) in tools"
+            :key="index"
+            :name="tool.name"
+          />
+        </div>
+        <div class="flex flex-row space-x-2">
+          <Skill
+            v-for="(skill, index) in skills"
+            :key="index"
+            :name="skill.name"
+          />
+        </div>
       </div>
     </div>
   </div>
@@ -36,19 +45,26 @@
 <script lang="ts">
 import { useRouter } from "vue-router";
 
-import { ToolName } from "../../enums/ToolColor";
+import { ToolName } from "@/enums/ToolColor";
+import { SkillName } from "@/enums/SkillColor";
 
 import Projectlabel from "@/components/project/Projectlabel.vue";
 import Projecttool from "@/components/project/Projecttool.vue";
+import Skill from "@/components/skill/Skill.vue";
 import TruncatedDescription from "@/components/TruncatedDescription.vue";
 
 import { useProjectStore } from "@/stores/projectStore";
 
 export default {
   name: "Project",
+  enums: {
+    ToolName,
+    SkillName,
+  },
   components: {
     Projectlabel,
     Projecttool,
+    Skill,
     TruncatedDescription,
   },
   props: {
@@ -76,6 +92,14 @@ export default {
       {
         name: {
           type: ToolName,
+          required: true,
+        },
+      },
+    ],
+    skills: [
+      {
+        name: {
+          type: SkillName,
           required: true,
         },
       },

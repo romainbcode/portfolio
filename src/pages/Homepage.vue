@@ -59,6 +59,7 @@
         </Vue3Marquee>
       </div>
     </div>
+
     <div class="my-4 grid gap-4 flex justify-center">
       <Project
         :id="1"
@@ -71,7 +72,17 @@
           { name: ToolName.NodeJS },
           { name: ToolName.MongoDB },
         ]"
+        :skills="[
+          {
+            name: SkillName.Figma,
+          },
+          { name: SkillName.MicroServices },
+          { name: SkillName.Git },
+          { name: SkillName.GoogleApis },
+          { name: SkillName.Trello }, 
+        ]"
       />
+
       <Project
         :id="2"
         :photo="pari"
@@ -80,10 +91,18 @@
         :description="'Paris sportif avec une monnaie virtuelle remplis de données récupérés via web scrapping'"
         :tools="[
           { name: ToolName.VueJS },
-          { name: ToolName.NodeJS },
-          { name: ToolName.NodeJS },
-          { name: ToolName.NodeJS },
-          { name: ToolName.NodeJS },
+          { name: ToolName.Python },
+          { name: ToolName.Redis },
+          
+          //METTRE la base relationnel
+        ]"
+        
+        :skills="[
+          {
+            name: SkillName.Git,
+          },
+          { name: SkillName.MicroServices },
+          { name: SkillName.WebScrapping },
         ]"
       />
     </div>
@@ -91,6 +110,9 @@
 </template>
 
 <script lang="ts">
+import { SkillName } from "@/enums/SkillColor";
+import { ToolName } from "@/enums/ToolColor";
+
 import { Github } from "lucide-vue-next";
 import { Linkedin } from "lucide-vue-next";
 
@@ -106,13 +128,7 @@ import ProjectTool from "@/components/project/Projecttool.vue";
 import Skill from "@/components/skill/Skill.vue";
 import SocialNetwork from "@/components/SocialNetwork.vue";
 
-import { ToolName } from "@/enums/ToolColor";
-import { SkillName } from "@/enums/SkillColor";
-
 export default {
-  enums: {
-    ToolName,
-  },
   components: {
     Github,
     Linkedin,
@@ -185,7 +201,7 @@ export default {
     };
   },
   setup() {
-    return { angularLogo, franceLogo, pari, PFE, ToolName };
+    return { angularLogo, franceLogo, pari, PFE, ToolName, SkillName };
   },
 };
 </script>

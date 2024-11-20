@@ -36,6 +36,12 @@ export default {
           return SkillColor.Figma;
         case SkillName.MicroServices:
           return SkillColor.MicroServices;
+        case SkillName.GoogleApis:
+          return SkillColor.GoogleApis;
+        case SkillName.WebScrapping:
+          return SkillColor.WebScrapping;
+        default:
+          return "#FFF";
       }
     },
     typeTool() {
@@ -54,6 +60,10 @@ export default {
           return "design";
         case SkillName.MicroServices:
           return "architecture";
+        case SkillName.GoogleApis:
+          return "service";
+        case SkillName.WebScrapping:
+          return "JSP";
         default:
           return "";
       }
