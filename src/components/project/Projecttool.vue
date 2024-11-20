@@ -1,6 +1,6 @@
 <template>
   <div
-    class="inline-block text-sm rounded-xl px-3 py-0.5 text-black"
+    class="inline-block text-sm rounded-xl px-3 py-0.5 text-black text-center"
     v-tooltip.bottom="typeTool"
     :class="backgroundColor"
   >
@@ -33,6 +33,10 @@ export default {
           return ToolColor.SpringBoot;
         case ToolName.Quarkus:
           return ToolColor.Quarkus;
+        case ToolName.Python:
+          return ToolColor.Python;
+        case ToolName.IntelligenceArtificielle:
+          return ToolColor.IntelligenceArtificielle;
         case ToolName.PostgreSQL:
           return ToolColor.PostgreSQL;
         case ToolName.MongoDB:
@@ -56,6 +60,10 @@ export default {
         case ToolName.SpringBoot:
           return "backend";
         case ToolName.Quarkus:
+          return "backend";
+        case ToolName.Python:
+          return "backend";
+        case ToolName.IntelligenceArtificielle:
           return "backend";
         case ToolName.PostgreSQL:
           return "base de données";

@@ -5,6 +5,7 @@ export enum SkillName {
   Docker = "Docker",
   Git = "Git",
   Figma = "Figma",
+  MicroServices = "Micro services",
 }
 
 export enum SkillColor {
@@ -14,4 +15,5 @@ export enum SkillColor {
   Docker = "bg-sky-300/[.30]",
   Git = "bg-orange-600/[.30]",
   Figma = "bg-violet-300/[.30]",
+  MicroServices = "bg-yellow-400/[.30]",
 }

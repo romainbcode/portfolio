@@ -34,6 +34,8 @@ export default {
           return SkillColor.Git;
         case SkillName.Figma:
           return SkillColor.Figma;
+        case SkillName.MicroServices:
+          return SkillColor.MicroServices;
       }
     },
     typeTool() {
@@ -50,6 +52,8 @@ export default {
           return "versionning";
         case SkillName.Figma:
           return "design";
+        case SkillName.MicroServices:
+          return "architecture";
         default:
           return "";
       }

@@ -10,10 +10,13 @@
           />
         </div>
 
-        <div class="flex flex-col justify-center">
-          <h1 class="font-bold mb-6 text-3xl">
-            {{ titre }}
-          </h1>
+        <div class="flex flex-col justify-evenly">
+          <div class="flex flex-row items-center justify-between mb-6">
+            <h1 class="font-bold text-3xl">
+              {{ titre }}
+            </h1>
+            <Projectlabel :label="label" :is-hovered="false" />
+          </div>
           <div class="grid grid-cols-4 gap-2">
             <Projecttool
               v-for="(tool, index) in tools"
@@ -21,9 +24,11 @@
               :name="tool.name"
             />
           </div>
+          <div class="flex flex-row justify-end items-end space-x-4">
+            <project-button-github url="" />
+          </div>
         </div>
       </div>
-      <Projectlabel :label="label" :is-hovered="false" />
 
       <div class="flex flex-col justify-start">
         <h3 class="font-bold text-2xl">Objectifs du projet</h3>
@@ -62,6 +67,8 @@ import { computed } from "vue";
 import { useProjectStore } from "@/stores/projectStore";
 import Divider from "primevue/divider";
 
+import ProjectButtonGithub from "@/components/project/ProjectButtonGithub.vue";
+
 import Projectlabel from "@/components/project/Projectlabel.vue";
 import Projecttool from "@/components/project/Projecttool.vue";
 import Video from "@/components/Video.vue";
@@ -72,6 +79,7 @@ export default {
   components: {
     Projectlabel,
     Projecttool,
+    ProjectButtonGithub,
     Camera,
     Video,
   },

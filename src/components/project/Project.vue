@@ -20,7 +20,7 @@
     </div>
 
     <div class="w-3/4 flex flex-col align-start justify-center my-1 mx-4">
-      <h2 class="text-xl font-bold mb-2 text-3xl">{{ title }}</h2>
+      <h2 class="text-xl font-bold mb-2 text-4xl">{{ title }}</h2>
       <TruncatedDescription :description="description" />
       <div class="flex flex-row space-x-2">
         <Projecttool
@@ -28,9 +28,6 @@
           :key="index"
           :name="tool.name"
         />
-      </div>
-      <div class="flex flex-row justify-end items-center space-x-4">
-        <project-button-github url="" />
       </div>
     </div>
   </div>
@@ -43,7 +40,6 @@ import { ToolName } from "../../enums/ToolColor";
 
 import Projectlabel from "@/components/project/Projectlabel.vue";
 import Projecttool from "@/components/project/Projecttool.vue";
-import ProjectButtonGithub from "@/components/project/ProjectButtonGithub.vue";
 import TruncatedDescription from "@/components/TruncatedDescription.vue";
 
 import { useProjectStore } from "@/stores/projectStore";
@@ -53,7 +49,6 @@ export default {
   components: {
     Projectlabel,
     Projecttool,
-    ProjectButtonGithub,
     TruncatedDescription,
   },
   props: {

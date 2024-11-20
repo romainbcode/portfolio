@@ -62,6 +62,18 @@
     <div class="my-4 grid gap-4 flex justify-center">
       <Project
         :id="1"
+        :photo="PFE"
+        :label="'web'"
+        :title="`Projet fin d'étude`"
+        :description="'Description of Project A'"
+        :tools="[
+          { name: ToolName.ReactJS },
+          { name: ToolName.NodeJS },
+          { name: ToolName.MongoDB },
+        ]"
+      />
+      <Project
+        :id="2"
         :photo="pari"
         :label="'web'"
         :title="'Paris sportif'"
@@ -72,18 +84,6 @@
           { name: ToolName.NodeJS },
           { name: ToolName.NodeJS },
           { name: ToolName.NodeJS },
-        ]"
-      />
-      <Project
-        :id="2"
-        :photo="PFE"
-        :label="'web'"
-        :title="`Projet fin d'étude`"
-        :description="'Description of Project A'"
-        :tools="[
-          { name: ToolName.ReactJS },
-          { name: ToolName.NodeJS },
-          { name: ToolName.MongoDB },
         ]"
       />
     </div>
@@ -134,12 +134,17 @@ export default {
         {
           name: ToolName.SpringBoot,
         },
-
         {
           name: ToolName.AngularJS,
         },
         {
           name: ToolName.Quarkus,
+        },
+        {
+          name: ToolName.Python,
+        },
+        {
+          name: ToolName.IntelligenceArtificielle,
         },
         {
           name: ToolName.PostgreSQL,
@@ -172,6 +177,9 @@ export default {
         },
         {
           name: SkillName.Figma,
+        },
+        {
+          name: SkillName.MicroServices,
         },
       ],
     };
