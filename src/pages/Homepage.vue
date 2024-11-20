@@ -20,11 +20,17 @@
             personnels.</span
           >
         </p>
-        <div class="w-full">
-          <div class="flex flex-row items-center justify-center">
+        <div class="w-3/4">
+          <div class="flex flex-row justify-evenly items-center justify-center">
             <SocialNetwork />
-
-            Basé à Lyon, France
+            <p class="flex flex-row items-center space-x-2">
+              <span> Basé à Lyon </span>
+              <img
+                :src="franceLogo"
+                alt="France logo"
+                class="h-auto w-[40px]"
+              />
+            </p>
           </div>
         </div>
       </div>
@@ -91,18 +97,17 @@ import { Linkedin } from "lucide-vue-next";
 import { Vue3Marquee } from "vue3-marquee";
 
 import angularLogo from "@/assets/angular_logo.png";
-
+import franceLogo from "@/assets/france_logo.png";
 import pari from "@/assets/project_logo/pari.png";
 import PFE from "@/assets/project_logo/PFE.png";
 
 import Project from "@/components/project/Project.vue";
 import ProjectTool from "@/components/project/Projecttool.vue";
 import Skill from "@/components/skill/Skill.vue";
+import SocialNetwork from "@/components/SocialNetwork.vue";
 
 import { ToolName } from "@/enums/ToolColor";
 import { SkillName } from "@/enums/SkillColor";
-
-import SocialNetwork from "@/components/SocialNetwork.vue";
 
 export default {
   enums: {
@@ -172,7 +177,7 @@ export default {
     };
   },
   setup() {
-    return { angularLogo, pari, PFE, ToolName };
+    return { angularLogo, franceLogo, pari, PFE, ToolName };
   },
 };
 </script>

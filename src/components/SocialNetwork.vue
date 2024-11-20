@@ -50,11 +50,41 @@
       </a>
       <div class="tooltip">GitHub</div>
     </li>
+    <li class="icon-content">
+      <a
+        :href="CV"
+        download="CV_Romain.pdf"
+        aria-label="CV"
+        data-social="cv"
+        target="_blank"
+      >
+        <div class="filled"></div>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="currentColor"
+          class="bi bi-file-earmark-person"
+          viewBox="0 0 16 16"
+          xml:space="preserve"
+        >
+          <path d="M11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+          <path
+            d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2v9.255S12 10 8 10s-5 1.755-5 1.755V2a1 1 0 0 1 1-1h5.5v2z"
+          />
+        </svg>
+      </a>
+      <div class="tooltip">CV</div>
+    </li>
   </ul>
 </template>
 <script>
+import CV from "@/assets/cv/RomainCV_S_Info.pdf";
 export default {
   name: "SocialNetwork",
+  setup() {
+    return { CV };
+  },
 };
 </script>
 <style>
@@ -135,6 +165,11 @@ ul {
 
 .example-2 .icon-content a[data-social="github"] .filled,
 .example-2 .icon-content a[data-social="github"] ~ .tooltip {
+  background-color: #24262a;
+}
+
+.example-2 .icon-content a[data-social="cv"] .filled,
+.example-2 .icon-content a[data-social="cv"] ~ .tooltip {
   background-color: #24262a;
 }
 </style>
