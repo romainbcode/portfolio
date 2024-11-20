@@ -90,7 +90,7 @@ export default {
     hoverStyle() {
       return {
         "cursor-pointer": this.isHovered,
-        "bg-gray-200": this.isHovered,
+        "bg-slate-200": this.isHovered,
       };
     },
   },

@@ -1,6 +1,6 @@
 <template>
   <nav
-    class="fixed top-4 left-1/2 transform -translate-x-1/2 bg-white rounded-lg shadow-md px-6 py-3 w-auto"
+    class="z-10 fixed top-4 left-1/2 transform -translate-x-1/2 bg-white rounded-lg shadow-md px-6 py-3 w-auto"
   >
     <div class="flex justify-center items-center">
       <RouterLink

@@ -9,6 +9,7 @@
             class="h-auto w-full object-contain"
           />
         </div>
+
         <div class="flex flex-col justify-center">
           <h1 class="font-bold mb-6 text-3xl">
             {{ titre }}
@@ -25,27 +26,32 @@
       <Projectlabel :label="label" :is-hovered="false" />
 
       <div class="flex flex-col justify-start">
-        <h3 class="font-bold text-2xl">Objectifs</h3>
+        <h3 class="font-bold text-2xl">Objectifs du projet</h3>
         <Divider />
         <p>{{ descriptionObjectifs }}</p>
 
         <div class="my-8"></div>
 
-        <h3 class="font-bold text-2xl">Compétences</h3>
+        <h3 class="font-bold text-2xl">Compétences travaillées</h3>
         <Divider />
         <p>{{ descriptionCompetences }}</p>
-      </div>
-    </div>
 
-    <div>
-      <!--<Video :mp4="require(`@/assets/project_video/video.mp4`)" />-->
+        <div class="my-8"></div>
+        <div id="videoSection">
+          <h3 class="font-bold text-2xl">Présentation visuel du projet</h3>
+          <Divider />
+
+          <div class="h-[80vh]"></div>
+          <!--<Video :mp4="require(`@/assets/project_video/video.mp4`)" />-->
+        </div>
+      </div>
     </div>
 
     <div
       class="fixed right-10 top-1/2 transform -translate-y-1/2 flex flex-col space-y-4"
     >
-      <button class="button">
-        <Camera class="screenIcon" color="black" size="25"/>
+      <button @click="scrollToSection" class="button">
+        <Camera class="screenIcon" color="black" size="25" />
       </button>
     </div>
   </div>
@@ -83,6 +89,12 @@ export default {
         () => project.value.descriptionCompetences
       ),
     };
+  },
+  methods: {
+    scrollToSection() {
+      const target = document.getElementById("videoSection");
+      target.scrollIntoView({ behavior: "smooth", block: "start" });
+    },
   },
 };
 </script>

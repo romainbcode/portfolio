@@ -1,9 +1,9 @@
 <template>
   <div class="mx-auto m-0 w-5/6">
-    <div class="flex flex-row justify-evenly center-item">
-      <div class="flex flex-col justify-center items-center">
+    <div class="flex flex-row justify-center center-item w-full">
+      <div class="flex flex-col justify-center items-center w-3/5">
         <h1 class="text-5xl font-bold tracking-wide leading-tight">
-          Ingénieur logiciel <br />
+          Ingénieur logiciel<br />
           <span class="relative">
             <span
               class="absolute inset-x-0 bottom-1 h-9 bg-gray-300 -z-10"
@@ -11,16 +11,30 @@
             full stack
           </span>
         </h1>
-        <p class="text-md text-gray-500 my-4">
-          Je suis Romain BIZOT, diplomé en Juillet 2024.
+        <p class="text-md text-gray-500 my-4 text-justify space-y-2 w-3/4">
+          Salut, je suis Romain, Ingénieur logiciel
+          <span>et passionné par le développement d'applications.</span>
+          <Br />
+          <span>
+            Découvrez ce portfolio, une sélection de mes projets
+            personnels.</span
+          >
         </p>
-        <SocialNetwork />
+        <div class="w-full">
+          <div class="flex flex-row items-center justify-center">
+            <SocialNetwork />
+
+            Basé à Lyon, France
+          </div>
+        </div>
       </div>
-      <div class="photo_profil_mouvement"></div>
+      <div class="w-2/5">
+        <div class="photo_profil_mouvement"></div>
+      </div>
     </div>
     <div class="flex justify-center">
       <div class="my-20 w-[60%]">
-        <Vue3Marquee direction="normal" duration=15 pauseOnHover="true">
+        <Vue3Marquee direction="normal" duration="15" pauseOnHover="true">
           <div class="flex space-x-8">
             <div v-for="(softskill, index) in softskills" :key="index">
               <ProjectTool :name="softskill.name" />
@@ -29,7 +43,7 @@
           <div class="px-4"></div>
         </Vue3Marquee>
         <div class="my-4"></div>
-        <Vue3Marquee direction="reverse" duration=14 pauseOnHover="true">
+        <Vue3Marquee direction="reverse" duration="14" pauseOnHover="true">
           <div class="flex space-x-8">
             <div v-for="(skill, index) in skills" :key="index">
               <Skill :name="skill.name" />

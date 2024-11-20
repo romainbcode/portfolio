@@ -1,6 +1,6 @@
 <template>
   <div
-    class="text-sm rounded-xl px-3 py-0.5 text-black"
+    class="inline-block text-sm rounded-xl px-3 py-0.5 text-black"
     v-tooltip.bottom="typeTool"
     :class="backgroundColor"
   >
