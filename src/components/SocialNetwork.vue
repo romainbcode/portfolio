@@ -170,6 +170,6 @@ ul {
 
 .example-2 .icon-content a[data-social="cv"] .filled,
 .example-2 .icon-content a[data-social="cv"] ~ .tooltip {
-  background-color: #24262a;
+  background-color: #c93d3d;
 }
 </style>

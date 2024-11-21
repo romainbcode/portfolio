@@ -24,7 +24,7 @@
           <div class="flex flex-row justify-evenly items-center justify-center">
             <SocialNetwork />
             <p class="flex flex-row items-center space-x-2">
-              <span> Basé à Lyon </span>
+              <span>Lyon</span>
               <img
                 :src="franceLogo"
                 alt="France logo"
@@ -81,6 +81,7 @@
           { name: SkillName.GoogleApis },
           { name: SkillName.Trello }, 
         ]"
+        :video="PFE_video"
       />
 
       <Project
@@ -104,6 +105,7 @@
           { name: SkillName.MicroServices },
           { name: SkillName.WebScrapping },
         ]"
+        :video="PFE_video"
       />
     </div>
   </div>
@@ -127,6 +129,8 @@ import Project from "@/components/project/Project.vue";
 import ProjectTool from "@/components/project/Projecttool.vue";
 import Skill from "@/components/skill/Skill.vue";
 import SocialNetwork from "@/components/SocialNetwork.vue";
+
+import PFE_video from "@/assets/project_video/PFE.mp4";
 
 export default {
   components: {
@@ -201,7 +205,7 @@ export default {
     };
   },
   setup() {
-    return { angularLogo, franceLogo, pari, PFE, ToolName, SkillName };
+    return { angularLogo, franceLogo, pari, PFE, ToolName, SkillName, PFE_video };
   },
 };
 </script>

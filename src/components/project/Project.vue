@@ -104,6 +104,10 @@ export default {
         },
       },
     ],
+    video: {
+      type: String,
+      required: true,
+    }
   },
   computed: {
     hoverStyle() {
@@ -126,6 +130,7 @@ export default {
         descriptionObjectifs: props.description,
         descriptionCompetences:
           props.tools?.map((tool) => (tool as any).name).join(", ") || "",
+        video: props.video
       });
 
       router.push({

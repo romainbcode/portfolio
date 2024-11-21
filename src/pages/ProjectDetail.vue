@@ -30,7 +30,7 @@
         </div>
       </div>
 
-      <div class="flex flex-col justify-start">
+      <div class="flex flex-col justify-start w-2/3">
         <h3 class="font-bold text-2xl">Objectifs du projet</h3>
         <Divider />
         <p>{{ descriptionObjectifs }}</p>
@@ -46,8 +46,9 @@
           <h3 class="font-bold text-2xl">Présentation visuel du projet</h3>
           <Divider />
 
-          <div class="h-[80vh]"></div>
-          <!--<Video :mp4="require(`@/assets/project_video/video.mp4`)" />-->
+          <div class="h-[80vh]">
+          <Video :mp4="video"></Video>
+        </div>
         </div>
       </div>
     </div>
@@ -96,6 +97,7 @@ export default {
       descriptionCompetences: computed(
         () => project.value.descriptionCompetences
       ),
+      video: computed(() => project.value.video)
     };
   },
   methods: {
