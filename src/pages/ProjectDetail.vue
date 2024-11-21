@@ -47,8 +47,8 @@
           <Divider />
 
           <div class="h-[80vh]">
-          <Video :mp4="video"></Video>
-        </div>
+            <Video :mp4="video"></Video>
+          </div>
         </div>
       </div>
     </div>
@@ -64,7 +64,9 @@
 </template>
 
 <script lang="ts">
-import { computed } from "vue";
+import { useRouter } from "vue-router";
+
+import { watch, computed } from "vue";
 import { useProjectStore } from "@/stores/projectStore";
 import Divider from "primevue/divider";
 
@@ -85,9 +87,21 @@ export default {
     Video,
   },
   setup() {
+    const router = useRouter();
     const projectStore = useProjectStore();
 
     const project = computed(() => projectStore.currentProject);
+
+    watch(
+      project,
+      (newProject) => {
+        if (newProject.titre === "") {
+          router.push("/");
+        }
+      },
+      { immediate: true }
+    );
+
     return {
       logo: computed(() => project.value.logo),
       titre: computed(() => project.value.titre),
@@ -97,7 +111,7 @@ export default {
       descriptionCompetences: computed(
         () => project.value.descriptionCompetences
       ),
-      video: computed(() => project.value.video)
+      video: computed(() => project.value.video),
     };
   },
   methods: {
