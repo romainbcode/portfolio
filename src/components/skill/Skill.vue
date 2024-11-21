@@ -10,6 +10,9 @@
 
 <script lang="ts">
 import { SkillName, SkillColor } from "@/enums/SkillColor";
+import { useI18n } from "vue-i18n";
+
+import { computed } from "vue";
 export default {
   name: "Skill",
   props: {
@@ -18,10 +21,11 @@ export default {
       required: true,
     },
   },
+  setup(props) {
+    const { t } = useI18n();
 
-  computed: {
-    backgroundColor() {
-      switch (this.name) {
+    const backgroundColor = computed(() => {
+      switch (props.name) {
         case SkillName.AGILE:
           return SkillColor.AGILE;
         case SkillName.PipelineGitlab:
@@ -43,15 +47,16 @@ export default {
         default:
           return "#FFF";
       }
-    },
-    typeTool() {
-      switch (this.name) {
+    });
+
+    const typeTool = computed(() => {
+      switch (props.name) {
         case SkillName.AGILE:
-          return "méthodologie";
+          return t("skills.methodology");
         case SkillName.PipelineGitlab:
           return "devops";
         case SkillName.Trello:
-          return "gestion de projet";
+          return t("skills.project_management");
         case SkillName.Docker:
           return "devops";
         case SkillName.Git:
@@ -67,7 +72,13 @@ export default {
         default:
           return "";
       }
-    },
+    });
+
+    return {
+      t,
+      backgroundColor,
+      typeTool,
+    };
   },
 };
 </script>

@@ -3,22 +3,19 @@
     <div class="flex flex-row justify-center center-item w-full">
       <div class="flex flex-col justify-center items-center w-3/5">
         <h1 class="text-5xl font-bold tracking-wide leading-tight">
-          Ingénieur logiciel<br />
+          {{ $t("home.title_1") }}<br />
           <span class="relative">
             <span
               class="absolute inset-x-0 bottom-1 h-9 bg-gray-300 -z-10"
             ></span>
-            full stack
+            {{ $t("home.title_2") }}
           </span>
         </h1>
         <p class="text-md text-gray-500 my-4 text-justify space-y-2 w-3/4">
-          Salut, je suis Romain, Ingénieur logiciel
-          <span>et passionné par le développement d'applications.</span>
+          {{ $t("home.description_1") }}
+          <span>{{ $t("home.description_2") }}</span>
           <Br />
-          <span>
-            Découvrez ce portfolio, une sélection de mes projets
-            personnels.</span
-          >
+          <span> {{ $t("home.description_3") }}</span>
         </p>
         <div class="w-3/4">
           <div class="flex flex-row justify-evenly items-center justify-center">
@@ -64,22 +61,20 @@
       <Project
         :id="1"
         :photo="PFE"
-        :label="'web'"
-        :title="`Projet fin d'étude`"
-        :description="'Description of Project A'"
+        :label="$t('project_1.label')"
+        :title="$t('project_1.title')"
+        :description="$t('project_1.description')"
         :tools="[
           { name: ToolName.ReactJS },
           { name: ToolName.NodeJS },
           { name: ToolName.MongoDB },
         ]"
         :skills="[
-          {
-            name: SkillName.Figma,
-          },
+          { name: SkillName.Figma },
           { name: SkillName.MicroServices },
           { name: SkillName.Git },
           { name: SkillName.GoogleApis },
-          { name: SkillName.Trello }, 
+          { name: SkillName.Trello },
         ]"
         :video="PFE_video"
       />
@@ -87,17 +82,16 @@
       <Project
         :id="2"
         :photo="pari"
-        :label="'web'"
-        :title="'Paris sportif'"
-        :description="'Paris sportif avec une monnaie virtuelle remplis de données récupérés via web scrapping'"
+        :label="$t('project_2.label')"
+        :title="$t('project_2.title')"
+        :description="$t('project_2.description')"
         :tools="[
           { name: ToolName.VueJS },
           { name: ToolName.Python },
           { name: ToolName.Redis },
-          
+
           //METTRE la base relationnel
         ]"
-        
         :skills="[
           {
             name: SkillName.Git,
@@ -115,12 +109,8 @@
 import { SkillName } from "@/enums/SkillColor";
 import { ToolName } from "@/enums/ToolColor";
 
-import { Github } from "lucide-vue-next";
-import { Linkedin } from "lucide-vue-next";
-
 import { Vue3Marquee } from "vue3-marquee";
 
-import angularLogo from "@/assets/angular_logo.png";
 import franceLogo from "@/assets/france_logo.png";
 import pari from "@/assets/project_logo/pari.png";
 import PFE from "@/assets/project_logo/PFE.png";
@@ -134,8 +124,6 @@ import PFE_video from "@/assets/project_video/PFE.mp4";
 
 export default {
   components: {
-    Github,
-    Linkedin,
     Vue3Marquee,
     Project,
     Skill,
@@ -205,7 +193,14 @@ export default {
     };
   },
   setup() {
-    return { angularLogo, franceLogo, pari, PFE, ToolName, SkillName, PFE_video };
+    return {
+      franceLogo,
+      pari,
+      PFE,
+      ToolName,
+      SkillName,
+      PFE_video,
+    };
   },
 };
 </script>

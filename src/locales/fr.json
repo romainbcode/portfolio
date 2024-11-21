@@ -1,0 +1,46 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "langue": "en"
+  },
+  "home": {
+    "title_1": "Ingénieur logiciel",
+    "title_2": "full stack",
+    "description_1": "Je suis Romain, Ingénieur logiciel",
+    "description_2": "et passionné par le développement d'applications.",
+    "description_3": "Découvrez ce portfolio, une sélection de mes projets personnels."
+  },
+  "buttons_label": {
+    "github": "Voir le code"
+  },
+  "skills": {
+    "methodology": "méthodologie",
+    "project_management": "gestion de projet"
+  },
+  "tool": {
+    "database": "base de données"
+  },
+  "project_1": {
+    "title": "Projet fin d'étude",
+    "description": "Description of Project PFE",
+    "label": "web"
+  },
+  "project_2": {
+    "title": "Paris sportif",
+    "description": "Paris sportif avec une monnaie virtuelle remplis de données récupérés via web scrapping",
+    "label": "web"
+  },
+  "project_details": {
+    "title_section_1": "Objectifs du projet",
+    "title_section_2": "Compétences travaillées",
+    "title_section_3": "Présentation visuel du projet"
+  },
+  "project_details_1": {
+    "description_section_1": "Ce projet simule un site de paris sportifs avec les classements et resultats des matchs des 5 grands championnats récupérés grâce à du web scrapping.\nLe backend possède une API Rest developpé en python. Le frontend lui est développé avec Vuejs.\n Deux bases de données ont été utilisées dans ce projet, une base de donnée non relationnelle : redis et une base de donnée relationnelle : SQLiteStudio.\n Ce projet possède différentes pages telle qu'une interface de connexion et d'inscription, une page d'accueil où il est possible de voir le classement et les matchs d'une journée d'un championnat.\n Il est également possible de voir l'historique des différents paris effectués.",
+    "description_section_2": "Objectifs du projet"
+  },
+  "project_details_2": {
+    "description_section_1": "app de paris",
+    "description_section_2": "Objectifs du projet"
+  }
+}

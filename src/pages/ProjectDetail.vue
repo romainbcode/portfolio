@@ -31,19 +31,25 @@
       </div>
 
       <div class="flex flex-col justify-start w-2/3">
-        <h3 class="font-bold text-2xl">Objectifs du projet</h3>
+        <h3 class="font-bold text-2xl">
+          {{ $t("project_details.title_section_1") }}
+        </h3>
         <Divider />
-        <p>{{ descriptionObjectifs }}</p>
+        <p class="description-text">{{ descriptionObjectifs }}</p>
 
         <div class="my-8"></div>
 
-        <h3 class="font-bold text-2xl">Compétences travaillées</h3>
+        <h3 class="font-bold text-2xl">
+          {{ $t("project_details.title_section_2") }}
+        </h3>
         <Divider />
         <p>{{ descriptionCompetences }}</p>
 
         <div class="my-8"></div>
         <div id="videoSection">
-          <h3 class="font-bold text-2xl">Présentation visuel du projet</h3>
+          <h3 class="font-bold text-2xl">
+            {{ $t("project_details.title_section_3") }}
+          </h3>
           <Divider />
 
           <div class="h-[80vh]">
@@ -178,5 +184,9 @@ export default {
   bottom: unset;
   /* transform: translateY(-30px); */
   transition-duration: 0.3s;
+}
+
+.description-text {
+  white-space: pre-line;
 }
 </style>

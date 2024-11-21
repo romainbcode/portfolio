@@ -55,6 +55,8 @@ import TruncatedDescription from "@/components/TruncatedDescription.vue";
 
 import { useProjectStore } from "@/stores/projectStore";
 
+import { useI18n } from "vue-i18n";
+
 export default {
   name: "Project",
   enums: {
@@ -107,7 +109,7 @@ export default {
     video: {
       type: String,
       required: true,
-    }
+    },
   },
   computed: {
     hoverStyle() {
@@ -120,17 +122,20 @@ export default {
   setup(props) {
     const router = useRouter();
     const projectStore = useProjectStore();
-
+    const { t } = useI18n();
     const navigateToDetail = () => {
       projectStore.setCurrentProject({
         logo: props.photo,
-        titre: props.title,
+        titre: t("project_" + props.id + ".title"),
         label: props.label,
         tools: props.tools,
-        descriptionObjectifs: props.description,
-        descriptionCompetences:
-          props.tools?.map((tool) => (tool as any).name).join(", ") || "",
-        video: props.video
+        descriptionObjectifs: t(
+          "project_details_" + props.id + ".description_section_1"
+        ),
+        descriptionCompetences: t(
+          "project_details_" + props.id + ".description_section_2"
+        ),
+        video: props.video,
       });
 
       router.push({

@@ -10,6 +10,9 @@
 
 <script lang="ts">
 import { ToolName, ToolColor } from "@/enums/ToolColor";
+import { useI18n } from "vue-i18n";
+
+import { computed } from "vue";
 export default {
   name: "ProjectTool",
   props: {
@@ -18,9 +21,11 @@ export default {
       required: true,
     },
   },
-  computed: {
-    backgroundColor() {
-      switch (this.name) {
+  setup(props) {
+    const { t } = useI18n();
+
+    const backgroundColor = computed(() => {
+      switch (props.name) {
         case ToolName.ReactJS:
           return ToolColor.ReactJS;
         case ToolName.VueJS:
@@ -46,9 +51,10 @@ export default {
         default:
           return "bg-gray-200";
       }
-    },
-    typeTool() {
-      switch (this.name) {
+    });
+
+    const typeTool = computed(() => {
+      switch (props.name) {
         case ToolName.ReactJS:
           return "frontend";
         case ToolName.VueJS:
@@ -66,15 +72,16 @@ export default {
         case ToolName.IntelligenceArtificielle:
           return "backend";
         case ToolName.PostgreSQL:
-          return "base de données";
+          return t("tool.database");
         case ToolName.MongoDB:
-          return "base de données";
+          return t("tool.database");
         case ToolName.Redis:
-          return "base de données";
+          return t("tool.database");
         default:
           return "";
       }
-    },
+    });
+    return { t, backgroundColor, typeTool };
   },
 };
 </script>

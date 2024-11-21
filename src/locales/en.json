@@ -1,0 +1,46 @@
+{
+  "nav": {
+    "home": "Home",
+    "langue": "fr"
+  },
+  "home": {
+    "title_1": "Software engineer",
+    "title_2": "full stack",
+    "description_1": "I'm Romain a Software engineer,",
+    "description_2": "and passionate about application development.",
+    "description_3": "Explore this portfolio, a selection of my personal projects."
+  },
+  "buttons_label": {
+    "github": "See the code"
+  },
+  "skills": {
+    "methodology": "methodology",
+    "project_management": "project management"
+  },
+  "tool": {
+    "database": "database"
+  },
+  "project_1": {
+    "title": "Final school project",
+    "description": "Description of Project PFE",
+    "label": "web"
+  },
+  "project_2": {
+    "title": "Paris sportif",
+    "description": "Paris sportif avec une monnaie virtuelle remplis de données récupérés via web scrapping",
+    "label": "web"
+  },
+  "project_details": {
+    "title_section_1": "Objectifs du projet",
+    "title_section_2": "Compétences travaillées",
+    "title_section_3": "Présentation visuel du projet"
+  },
+  "project_details_1": {
+    "description_section_1": "pfe",
+    "description_section_2": "Objectifs du projet"
+  },
+  "project_details_2": {
+    "description_section_1": "app de paris",
+    "description_section_2": "Objectifs du projet"
+  }
+}

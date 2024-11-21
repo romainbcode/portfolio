@@ -7,14 +7,28 @@
         to="/"
         class="text-gray-600 hover:text-blue-600 font-medium transition-colors duration-300 px-2 rounded-md hover:bg-blue-50"
       >
-        Accueil
+        {{ $t("nav.home") }}
       </RouterLink>
+      <button @click="changeLanguage($t('nav.langue'))">
+        {{ $t("nav.langue") }}
+      </button>
     </div>
   </nav>
 </template>
 
-<script>
+<script lang="ts">
+import { useI18n } from "vue-i18n";
+
 export default {
   name: "Navbar",
+  setup() {
+    const { locale } = useI18n();
+
+    const changeLanguage = (langue) => {
+      locale.value = langue;
+    };
+
+    return { changeLanguage };
+  },
 };
 </script>
