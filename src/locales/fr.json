@@ -1,7 +1,8 @@
 {
   "nav": {
     "home": "Accueil",
-    "langue": "en"
+    "langue": "en",
+    "translate": "translate"
   },
   "home": {
     "title_1": "Ingénieur logiciel",
@@ -21,13 +22,13 @@
     "database": "base de données"
   },
   "project_1": {
-    "title": "Projet fin d'étude",
-    "description": "Description of Project PFE",
+    "title": "Eduvolution",
+    "description": "Projet de fin d'études proposant des formations avec quiz, assistées par un chatbot IA intégré à Google Calendar et Google Classroom.",
     "label": "web"
   },
   "project_2": {
     "title": "Paris sportif",
-    "description": "Paris sportif avec une monnaie virtuelle remplis de données récupérés via web scrapping",
+    "description": "Application de paris sportifs affichant les résultats des matchs et les classements des 5 grands championnats d'Europe via web scraping.",
     "label": "web"
   },
   "project_details": {

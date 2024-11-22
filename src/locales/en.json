@@ -1,7 +1,8 @@
 {
   "nav": {
     "home": "Home",
-    "langue": "fr"
+    "langue": "fr",
+    "translate": "traduire"
   },
   "home": {
     "title_1": "Software engineer",
