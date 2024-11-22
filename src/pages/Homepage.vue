@@ -61,6 +61,7 @@
       <Project
         :id="1"
         :photo="PFE"
+        :url="'https://github.com/romainbcode/PFE-Forma'"
         :label="$t('project_1.label')"
         :title="$t('project_1.title')"
         :description="$t('project_1.description')"

@@ -32,7 +32,7 @@
             />
           </div>
           <div class="flex flex-row justify-end items-end space-x-4">
-            <project-button-github url="" />
+            <project-button-github :url="url" />
           </div>
         </div>
       </div>
@@ -119,6 +119,7 @@ export default {
 
     return {
       logo: computed(() => project.value.logo),
+      url: computed(() => project.value.url),
       titre: computed(() => project.value.titre),
       label: computed(() => project.value.label),
       tools: computed(() => project.value.tools),

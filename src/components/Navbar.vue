@@ -22,6 +22,7 @@
 
 <script lang="ts">
 import { useI18n } from "vue-i18n";
+import { useRouter } from "vue-router";
 
 import Flag_FR from "@/assets/flag_fr.png";
 import Flag_US from "@/assets/flag_us.jpg";
@@ -32,6 +33,7 @@ export default {
   name: "Navbar",
   setup() {
     const { locale, t } = useI18n();
+    //const router = useRouter();
 
     const changeLanguage = (langue) => {
       locale.value = langue;
@@ -48,6 +50,7 @@ export default {
       }
     });
 
+    //router.push("/");
     return { changeLanguage, showFlag };
   },
 };

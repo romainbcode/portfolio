@@ -74,6 +74,10 @@ export default {
       type: String,
       required: true,
     },
+    url: {
+      type: String,
+      required: true,
+    },
     label: {
       type: String,
       required: true,
@@ -126,6 +130,7 @@ export default {
     const navigateToDetail = () => {
       projectStore.setCurrentProject({
         logo: props.photo,
+        url: props.url,
         titre: t("project_" + props.id + ".title"),
         label: props.label,
         tools: props.tools,
