@@ -129,6 +129,7 @@ export default {
         titre: t("project_" + props.id + ".title"),
         label: props.label,
         tools: props.tools,
+        skills: props.skills,
         descriptionObjectifs: t(
           "project_details_" + props.id + ".description_section_1"
         ),

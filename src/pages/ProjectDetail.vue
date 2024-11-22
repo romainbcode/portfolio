@@ -24,6 +24,13 @@
               :name="tool.name"
             />
           </div>
+          <div class="grid grid-cols-4 gap-2">
+            <Skill
+              v-for="(skill, index) in skills"
+              :key="index"
+              :name="skill.name"
+            />
+          </div>
           <div class="flex flex-row justify-end items-end space-x-4">
             <project-button-github url="" />
           </div>
@@ -77,6 +84,7 @@ import { useProjectStore } from "@/stores/projectStore";
 import Divider from "primevue/divider";
 
 import ProjectButtonGithub from "@/components/project/ProjectButtonGithub.vue";
+import Skill from "@/components/skill/Skill.vue";
 
 import Projectlabel from "@/components/project/Projectlabel.vue";
 import Projecttool from "@/components/project/Projecttool.vue";
@@ -89,6 +97,7 @@ export default {
     Projectlabel,
     Projecttool,
     ProjectButtonGithub,
+    Skill,
     Camera,
     Video,
   },
@@ -113,6 +122,7 @@ export default {
       titre: computed(() => project.value.titre),
       label: computed(() => project.value.label),
       tools: computed(() => project.value.tools),
+      skills: computed(() => project.value.skills),
       descriptionObjectifs: computed(() => project.value.descriptionObjectifs),
       descriptionCompetences: computed(
         () => project.value.descriptionCompetences
