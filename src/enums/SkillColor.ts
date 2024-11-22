@@ -7,7 +7,7 @@ export enum SkillName {
   Figma = "Figma",
   MicroServices = "Micro services",
   GoogleApis = "Google Apis",
-  WebScrapping = "Web scrapping",
+  WebScraping = "Web scraping",
 }
 
 export enum SkillColor {
@@ -19,5 +19,5 @@ export enum SkillColor {
   Figma = "bg-violet-300/[.30]",
   MicroServices = "bg-yellow-400/[.30]",
   GoogleApis = "bg-blue-500/[.30]",
-  WebScrapping = "bg-red-500/[.30]",
+  WebScraping = "bg-red-500/[.30]",
 }

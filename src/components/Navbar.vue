@@ -9,8 +9,12 @@
       >
         {{ $t("nav.home") }}
       </RouterLink>
-      <button @click="changeLanguage($t('nav.langue'))">
-        {{ $t("nav.langue") }}
+      <button
+        v-tooltip.bottom="$t('nav.translate')"
+        class="flex items-center ml-4"
+        @click="changeLanguage($t('nav.langue'))"
+      >
+        <img :src="showFlag" class="w-auto h-5" />
       </button>
     </div>
   </nav>
@@ -19,16 +23,32 @@
 <script lang="ts">
 import { useI18n } from "vue-i18n";
 
+import Flag_FR from "@/assets/flag_fr.png";
+import Flag_US from "@/assets/flag_us.jpg";
+
+import { computed } from "vue";
+
 export default {
   name: "Navbar",
   setup() {
-    const { locale } = useI18n();
+    const { locale, t } = useI18n();
 
     const changeLanguage = (langue) => {
       locale.value = langue;
     };
 
-    return { changeLanguage };
+    const showFlag = computed(() => {
+      switch (t("nav.langue")) {
+        case "fr":
+          return Flag_FR;
+        case "en":
+          return Flag_US;
+        default:
+          return null;
+      }
+    });
+
+    return { changeLanguage, showFlag };
   },
 };
 </script>

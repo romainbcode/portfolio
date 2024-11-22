@@ -97,7 +97,7 @@
             name: SkillName.Git,
           },
           { name: SkillName.MicroServices },
-          { name: SkillName.WebScrapping },
+          { name: SkillName.WebScraping },
         ]"
         :video="PFE_video"
       />

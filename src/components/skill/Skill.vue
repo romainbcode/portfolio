@@ -42,8 +42,8 @@ export default {
           return SkillColor.MicroServices;
         case SkillName.GoogleApis:
           return SkillColor.GoogleApis;
-        case SkillName.WebScrapping:
-          return SkillColor.WebScrapping;
+        case SkillName.WebScraping:
+          return SkillColor.WebScraping;
         default:
           return "#FFF";
       }
@@ -67,7 +67,7 @@ export default {
           return "architecture";
         case SkillName.GoogleApis:
           return "service";
-        case SkillName.WebScrapping:
+        case SkillName.WebScraping:
           return "JSP";
         default:
           return "";
