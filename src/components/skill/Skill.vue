@@ -21,7 +21,7 @@ export default {
       required: true,
     },
   },
-  setup(props) {
+  setup(props: any) {
     const { t } = useI18n();
 
     const backgroundColor = computed(() => {

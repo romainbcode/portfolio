@@ -35,18 +35,18 @@ export default {
     const { locale, t } = useI18n();
     //const router = useRouter();
 
-    const changeLanguage = (langue) => {
+    const changeLanguage = (langue: string) => {
       locale.value = langue;
     };
 
-    const showFlag = computed(() => {
+    const showFlag = computed<string>(() => {
       switch (t("nav.langue")) {
         case "fr":
           return Flag_FR;
         case "en":
           return Flag_US;
         default:
-          return null;
+          return "";
       }
     });
 

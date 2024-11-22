@@ -37,7 +37,7 @@
     </div>
     <div class="flex justify-center">
       <div class="my-20 w-[60%]">
-        <Vue3Marquee direction="normal" duration="15" pauseOnHover="true">
+        <Vue3Marquee direction="normal" :duration="15" :pauseOnHover="true">
           <div class="flex space-x-8">
             <div v-for="(softskill, index) in softskills" :key="index">
               <ProjectTool :name="softskill.name" />
@@ -46,7 +46,7 @@
           <div class="px-4"></div>
         </Vue3Marquee>
         <div class="my-4"></div>
-        <Vue3Marquee direction="reverse" duration="14" pauseOnHover="true">
+        <Vue3Marquee direction="reverse" :duration="14" :pauseOnHover="true">
           <div class="flex space-x-8">
             <div v-for="(skill, index) in skills" :key="index">
               <Skill :name="skill.name" />
@@ -59,7 +59,7 @@
 
     <div class="my-4 grid gap-4 flex justify-center">
       <Project
-        :id="1"
+        :id="'1'"
         :photo="PFE"
         :url="'https://github.com/romainbcode/PFE-Forma'"
         :label="$t('project_1.label')"
@@ -81,8 +81,9 @@
       />
 
       <Project
-        :id="2"
+        :id="'2'"
         :photo="pari"
+        :url="'https://github.com/romainbcode/PFE-Forma'"
         :label="$t('project_2.label')"
         :title="$t('project_2.title')"
         :description="$t('project_2.description')"

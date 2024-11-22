@@ -21,10 +21,10 @@ export default {
       required: true,
     },
   },
-  setup(props) {
+  setup(props: any) {
     const { t } = useI18n();
 
-    const backgroundColor = computed(() => {
+    const backgroundColor = computed<string>(() => {
       switch (props.name) {
         case ToolName.ReactJS:
           return ToolColor.ReactJS;
@@ -53,32 +53,24 @@ export default {
       }
     });
 
-    const typeTool = computed(() => {
+    const typeTool = computed<string>(() => {
       switch (props.name) {
         case ToolName.ReactJS:
-          return "frontend";
         case ToolName.VueJS:
-          return "frontend";
         case ToolName.AngularJS:
           return "frontend";
         case ToolName.NodeJS:
-          return "backend";
         case ToolName.SpringBoot:
-          return "backend";
         case ToolName.Quarkus:
-          return "backend";
         case ToolName.Python:
-          return "backend";
         case ToolName.IntelligenceArtificielle:
           return "backend";
         case ToolName.PostgreSQL:
-          return t("tool.database");
         case ToolName.MongoDB:
-          return t("tool.database");
         case ToolName.Redis:
           return t("tool.database");
         default:
-          return "";
+          return "autre";
       }
     });
     return { t, backgroundColor, typeTool };

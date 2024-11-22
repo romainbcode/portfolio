@@ -70,7 +70,7 @@
       class="fixed right-10 top-1/2 transform -translate-y-1/2 flex flex-col space-y-4"
     >
       <button @click="scrollToSection" class="button">
-        <Camera class="screenIcon" color="black" size="25" />
+        <Camera class="screenIcon" color="black" :size="25" />
       </button>
     </div>
   </div>
@@ -92,6 +92,9 @@ import Video from "@/components/Video.vue";
 
 import { Camera } from "lucide-vue-next";
 
+import { ToolName } from "@/enums/ToolColor";
+import { SkillName } from "@/enums/SkillColor";
+
 export default {
   components: {
     Projectlabel,
@@ -100,6 +103,9 @@ export default {
     Skill,
     Camera,
     Video,
+  },
+  enums: {
+    ToolName, SkillName
   },
   setup() {
     const router = useRouter();
@@ -122,8 +128,8 @@ export default {
       url: computed(() => project.value.url),
       titre: computed(() => project.value.titre),
       label: computed(() => project.value.label),
-      tools: computed(() => project.value.tools),
-      skills: computed(() => project.value.skills),
+      tools: computed(() => project.value.tools as { name: ToolName }[]),
+      skills: computed(() => project.value.skills as { name: ToolName }[]),
       descriptionObjectifs: computed(() => project.value.descriptionObjectifs),
       descriptionCompetences: computed(
         () => project.value.descriptionCompetences
@@ -134,7 +140,9 @@ export default {
   methods: {
     scrollToSection() {
       const target = document.getElementById("videoSection");
-      target.scrollIntoView({ behavior: "smooth", block: "start" });
+      if (target) {
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
     },
   },
 };

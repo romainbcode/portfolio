@@ -43,6 +43,7 @@
 </template>
 
 <script lang="ts">
+import { ref, computed } from "vue";
 import { useRouter } from "vue-router";
 
 import { ToolName } from "@/enums/ToolColor";
@@ -56,6 +57,14 @@ import TruncatedDescription from "@/components/TruncatedDescription.vue";
 import { useProjectStore } from "@/stores/projectStore";
 
 import { useI18n } from "vue-i18n";
+
+interface Tool {
+  name: ToolName;
+}
+
+interface Skill {
+  name: SkillName;
+}
 
 export default {
   name: "Project",
@@ -94,36 +103,26 @@ export default {
       type: String,
       required: true,
     },
-    tools: [
-      {
-        name: {
-          type: ToolName,
-          required: true,
-        },
-      },
-    ],
-    skills: [
-      {
-        name: {
-          type: SkillName,
-          required: true,
-        },
-      },
-    ],
+    tools: {
+      type: Array as () => Tool[], // Tableau d'objets ayant une propriété 'name' de type ToolName
+      required: true,
+    },
+    skills: {
+      type: Array as () => Skill[], // Tableau d'objets ayant une propriété 'name' de type SkillName
+      required: true,
+    },
     video: {
       type: String,
       required: true,
     },
   },
-  computed: {
-    hoverStyle() {
-      return {
-        "cursor-pointer": this.isHovered,
-        "bg-slate-200": this.isHovered,
-      };
-    },
-  },
-  setup(props) {
+  setup(props: any) {
+    const isHovered = ref(false);
+
+    const hoverStyle = computed(() => {
+      return isHovered.value ? "cursor-pointer bg-slate-100" : "";
+    });
+
     const router = useRouter();
     const projectStore = useProjectStore();
     const { t } = useI18n();
@@ -151,12 +150,9 @@ export default {
     };
 
     return {
+      isHovered,
+      hoverStyle,
       navigateToDetail,
-    };
-  },
-  data() {
-    return {
-      isHovered: false,
     };
   },
 };
