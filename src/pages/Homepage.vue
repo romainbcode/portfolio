@@ -35,11 +35,22 @@
         <div class="photo_profil_mouvement"></div>
       </div>
     </div>
-    <div class="mb-10">
-
-
-      <CloudWords></CloudWords>
+    <div class="my-10"></div>
+    <div class="flex justify-center w-full">
+      <div class="flex-col mb-10 w-2/3">
+        <div class="flex flex-row justify-between">
+          <h3 class="font-bold text-2xl">
+            {{ $t("home.title_section_1") }}
+          </h3>
+          <button @click="triggerExplosionFromParent" class="easter-egg-button">
+            <img :src="BombeLogo" class="h-5 w-auto" />
+          </button>
+        </div>
+        <Divider />
+        <CloudWords ref="child"></CloudWords>
+      </div>
     </div>
+
     <!--<div class="flex justify-center">
       <div class="my-20 w-[60%]">
         <Vue3Marquee direction="normal" :duration="15" :pauseOnHover="true">
@@ -61,53 +72,60 @@
         </Vue3Marquee>
       </div>
     </div>-->
+    <div class="flex justify-center w-full">
+      <div class="flex-col mb-10 w-2/3">
+        <h3 class="font-bold text-2xl">
+          {{ $t("home.title_section_2") }}
+        </h3>
+        <Divider />
+        <div class="my-4 grid gap-4 flex justify-center">
+          <Project
+            :id="'1'"
+            :photo="PFE"
+            :url="'https://github.com/romainbcode/PFE-Forma'"
+            :label="$t('project_1.label')"
+            :title="$t('project_1.title')"
+            :description="$t('project_1.description')"
+            :tools="[
+              { name: ToolName.ReactJS },
+              { name: ToolName.NodeJS },
+              { name: ToolName.MongoDB },
+            ]"
+            :skills="[
+              { name: SkillName.Figma },
+              { name: SkillName.MicroServices },
+              { name: SkillName.Git },
+              { name: SkillName.GoogleApis },
+              { name: SkillName.Trello },
+            ]"
+            :video="PFE_video"
+          />
 
-    <div class="my-4 grid gap-4 flex justify-center">
-      <Project
-        :id="'1'"
-        :photo="PFE"
-        :url="'https://github.com/romainbcode/PFE-Forma'"
-        :label="$t('project_1.label')"
-        :title="$t('project_1.title')"
-        :description="$t('project_1.description')"
-        :tools="[
-          { name: ToolName.ReactJS },
-          { name: ToolName.NodeJS },
-          { name: ToolName.MongoDB },
-        ]"
-        :skills="[
-          { name: SkillName.Figma },
-          { name: SkillName.MicroServices },
-          { name: SkillName.Git },
-          { name: SkillName.GoogleApis },
-          { name: SkillName.Trello },
-        ]"
-        :video="PFE_video"
-      />
+          <Project
+            :id="'2'"
+            :photo="pari"
+            :url="'https://github.com/romainbcode/PFE-Forma'"
+            :label="$t('project_2.label')"
+            :title="$t('project_2.title')"
+            :description="$t('project_2.description')"
+            :tools="[
+              { name: ToolName.VueJS },
+              { name: ToolName.Python },
+              { name: ToolName.Redis },
 
-      <Project
-        :id="'2'"
-        :photo="pari"
-        :url="'https://github.com/romainbcode/PFE-Forma'"
-        :label="$t('project_2.label')"
-        :title="$t('project_2.title')"
-        :description="$t('project_2.description')"
-        :tools="[
-          { name: ToolName.VueJS },
-          { name: ToolName.Python },
-          { name: ToolName.Redis },
-
-          //METTRE la base relationnel
-        ]"
-        :skills="[
-          {
-            name: SkillName.Git,
-          },
-          { name: SkillName.MicroServices },
-          { name: SkillName.WebScraping },
-        ]"
-        :video="PFE_video"
-      />
+              //METTRE la base relationnel
+            ]"
+            :skills="[
+              {
+                name: SkillName.Git,
+              },
+              { name: SkillName.MicroServices },
+              { name: SkillName.WebScraping },
+            ]"
+            :video="PFE_video"
+          />
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -121,12 +139,13 @@ import { Vue3Marquee } from "vue3-marquee";
 import franceLogo from "@/assets/france_logo.png";
 import pari from "@/assets/project_logo/pari.png";
 import PFE from "@/assets/project_logo/PFE.png";
+import BombeLogo from "@/assets/bombe.png";
 
 import Project from "@/components/project/Project.vue";
 import ProjectTool from "@/components/project/Projecttool.vue";
 import Skill from "@/components/skill/Skill.vue";
 import SocialNetwork from "@/components/SocialNetwork.vue";
-import CloudWords from "@/components/CloudWords.vue"
+import CloudWords from "@/components/CloudWords.vue";
 
 import PFE_video from "@/assets/project_video/PFE.mp4";
 
@@ -138,6 +157,12 @@ export default {
     ProjectTool,
     SocialNetwork,
     CloudWords,
+  },
+  methods: {
+    triggerExplosionFromParent() {
+      // Accéder à la méthode triggerExplosion dans l'enfant via le ref
+      this.$refs.child.triggerExplosion();
+    },
   },
   data() {
     return {
@@ -209,6 +234,7 @@ export default {
       ToolName,
       SkillName,
       PFE_video,
+      BombeLogo,
     };
   },
 };

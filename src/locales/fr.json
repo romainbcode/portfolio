@@ -9,7 +9,11 @@
     "title_2": "full stack",
     "description_1": "Je suis Romain, Ingénieur logiciel",
     "description_2": "et passionné par le développement d'applications.",
-    "description_3": "Découvrez ce portfolio, une sélection de mes projets personnels."
+    "description_3": "Découvrez ce portfolio, une sélection de mes projets personnels.",
+    "title_section_1": "Compétences",
+    "button_softskill": "Voir les soft Skills",
+    "button_hardskill": "Voir les hard Skills",
+    "title_section_2": "Projets"
   },
   "buttons_label": {
     "github": "Voir le code"
