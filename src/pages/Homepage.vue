@@ -35,7 +35,12 @@
         <div class="photo_profil_mouvement"></div>
       </div>
     </div>
-    <div class="flex justify-center">
+    <div class="mb-10">
+
+
+      <CloudWords></CloudWords>
+    </div>
+    <!--<div class="flex justify-center">
       <div class="my-20 w-[60%]">
         <Vue3Marquee direction="normal" :duration="15" :pauseOnHover="true">
           <div class="flex space-x-8">
@@ -55,7 +60,7 @@
           <div class="px-4"></div>
         </Vue3Marquee>
       </div>
-    </div>
+    </div>-->
 
     <div class="my-4 grid gap-4 flex justify-center">
       <Project
@@ -121,6 +126,7 @@ import Project from "@/components/project/Project.vue";
 import ProjectTool from "@/components/project/Projecttool.vue";
 import Skill from "@/components/skill/Skill.vue";
 import SocialNetwork from "@/components/SocialNetwork.vue";
+import CloudWords from "@/components/CloudWords.vue"
 
 import PFE_video from "@/assets/project_video/PFE.mp4";
 
@@ -131,6 +137,7 @@ export default {
     Skill,
     ProjectTool,
     SocialNetwork,
+    CloudWords,
   },
   data() {
     return {
