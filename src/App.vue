@@ -2,7 +2,7 @@
 <template>
   <div>
     <Navbar />
-    <main class="pt-20">
+    <main class="pt-[120px]">
       <RouterView />
     </main>
   </div>

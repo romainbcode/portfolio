@@ -1,23 +1,25 @@
 <template>
   <div class="mx-auto m-0 w-5/6">
     <div class="flex flex-row justify-center center-item w-full">
-      <div class="flex flex-col justify-center items-center w-3/5">
-        <h1 class="text-5xl font-bold tracking-wide leading-tight">
-          {{ $t("home.title_1") }}<br />
-          <span class="relative">
-            <span
-              class="absolute inset-x-0 bottom-1 h-9 bg-gray-300 -z-10"
-            ></span>
-            {{ $t("home.title_2") }}
-          </span>
-        </h1>
-        <p class="text-md text-gray-500 my-4 text-justify space-y-2 w-3/4">
-          {{ $t("home.description_1") }}
-          <span>{{ $t("home.description_2") }}</span>
-          <Br />
-          <span> {{ $t("home.description_3") }}</span>
-        </p>
-        <div class="w-3/4">
+      <div class="flex flex-col justify-center items-center w-[60%]">
+        <div class="text-start">
+          <h1 class="text-7xl font-bold tracking-wide leading-tight">
+            {{ $t("home.title_1") }}<br />
+            <span class="relative">
+              <span
+                class="absolute -inset-x-3 bottom-1 h-12 bg-gray-300 -z-10"
+              ></span>
+              {{ $t("home.title_2") }}
+            </span>
+          </h1>
+          <p class="text-lg text-gray-500 my-4 text-justify space-y-2">
+            {{ $t("home.description_1") }}
+            <span>{{ $t("home.description_2") }}</span>
+            <Br />
+            <span> {{ $t("home.description_3") }}</span>
+          </p>
+        </div>
+        <div class="w-3/4 my-10">
           <div class="flex flex-row justify-evenly items-center justify-center">
             <SocialNetwork />
             <p class="flex flex-row items-center space-x-2">
@@ -31,7 +33,8 @@
           </div>
         </div>
       </div>
-      <div class="w-2/5">
+      <div class="w-[5%]"></div>
+      <div class="w-[35%]">
         <div class="photo_profil_mouvement"></div>
       </div>
     </div>
@@ -248,10 +251,10 @@ export default {
   background-size: cover;
   border: 3px solid #2d2e32;
   border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-  height: 20rem;
+  height: 25rem;
   position: relative;
   transition: all 1s ease-in-out;
-  width: 20rem;
+  width: 25rem;
 }
 @keyframes morph {
   0% {
