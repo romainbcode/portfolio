@@ -30,19 +30,22 @@ export default {
         { text: 'Redis', size: 22, color: 'rgba(251, 113, 133, 0.3)', borderColor: 'rgba(251, 113, 133, 1)' },
       ],
       softskills: [
+      { text: 'Micro services', size: 25, color: 'rgba(251, 191, 36, 0.3)', borderColor: 'rgba(251, 191, 36, 1)' },
+      { text: 'Google APIs', size: 28, color: 'rgba(59, 130, 246, 0.3)', borderColor: 'rgba(59, 130, 246, 1)' },
+      { text: 'Pipeline Gitlab', size: 35, color: 'rgba(249, 115, 22, 0.3)', borderColor: 'rgba(249, 115, 22, 1)' },
+      { text: 'Web scrapping', size: 22, color: 'rgba(239, 68, 68, 0.3)', borderColor: 'rgba(239, 68, 68, 1)' },
+
       { text: 'AGILE', size: 30, color: 'rgba(14, 165, 233, 0.3)', borderColor: 'rgba(14, 165, 233, 1)' },
-        { text: 'Pipeline Gitlab', size: 35, color: 'rgba(249, 115, 22, 0.3)', borderColor: 'rgba(249, 115, 22, 1)' },
         { text: 'Trello', size: 30, color: 'rgba(113, 199, 236, 0.3)', borderColor: 'rgba(113, 199, 236, 1)' },
         { text: 'Docker', size: 25, color: 'rgba(113, 199, 236, 0.3)', borderColor: 'rgba(113, 199, 236, 1)' },
+
         { text: 'Git', size: 28, color: 'rgba(249, 115, 22, 0.3)', borderColor: 'rgba(249, 115, 22, 1)' },
         { text: 'Figma', size: 22, color: 'rgba(167, 139, 250, 0.3)', borderColor: 'rgba(167, 139, 250, 1)' },
-        { text: 'Micro services', size: 25, color: 'rgba(251, 191, 36, 0.3)', borderColor: 'rgba(251, 191, 36, 1)' },
-        { text: 'Google APIs', size: 28, color: 'rgba(59, 130, 246, 0.3)', borderColor: 'rgba(59, 130, 246, 1)' },
-        { text: 'Web scrapping', size: 22, color: 'rgba(239, 68, 68, 0.3)', borderColor: 'rgba(239, 68, 68, 1)' },
       ],
       actualSkills: [],
       showHardSkills: Boolean = true,
       wordBodies: [], // Stockage des corps pour pouvoir les réinitialiser
+      positionsX: [200, 400, 600], // Trois positions X prédéfinies
     }
   },
   mounted() {
@@ -163,7 +166,7 @@ export default {
       // Création des nouveaux mots
       this.wordBodies = this.actualSkills.map((word, index) => {
         return Bodies.rectangle(
-          Math.random() * 400 + 200,
+          this.positionsX[index % this.positionsX.length],
           -50 - (index * 60),
           word.text.length * 12,
           40,
