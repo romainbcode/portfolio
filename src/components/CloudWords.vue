@@ -178,7 +178,7 @@ export default {
         },
       ],
       actualSkills: [],
-      showHardSkills: (Boolean = true),
+      showHardSkills: (Boolean = false),
       wordBodies: [],
       positionsX: {
         frontend: 200,

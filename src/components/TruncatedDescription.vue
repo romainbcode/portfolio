@@ -1,7 +1,7 @@
 <template>
   <p
     ref="descriptionRef"
-    class="text-sm text-gray-400 mb-4 max-w-[450px] line-clamp-2"
+    class="text-sm text-gray-400 mb-4 max-w-[500px] line-clamp-2"
   >
     {{ truncatedDescription }}
   </p>

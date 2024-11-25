@@ -7,9 +7,13 @@
   "home": {
     "title_1": "Software engineer",
     "title_2": "full stack",
-    "description_1": "I'm Romain a Software engineer,",
+    "description_1": "I'm Romain BIZOT a Software engineer,",
     "description_2": "and passionate about application development.",
-    "description_3": "Explore this portfolio, a selection of my personal projects."
+    "description_3": "Explore this portfolio, a selection of my personal projects.",
+    "title_section_1": "Skills",
+    "button_softskill": "See soft Skills",
+    "button_hardskill": "See hard Skills",
+    "title_section_2": "Projects"
   },
   "buttons_label": {
     "github": "See the code"
@@ -22,19 +26,19 @@
     "database": "database"
   },
   "project_1": {
-    "title": "Final school project",
-    "description": "Description of Project PFE",
+    "title": "Eduvolution",
+    "description": "Final school project offering training courses with quizzes, assisted by an AI chatbot integrated with Google Calendar and Google Classroom.",
     "label": "web"
   },
   "project_2": {
-    "title": "Paris sportif",
-    "description": "Paris sportif avec une monnaie virtuelle remplis de données récupérés via web scrapping",
+    "title": "Sport betting",
+    "description": "Sports betting application displaying match results and standings for Europe's 5 major championships via web scraping, and allowing you to place bets.",
     "label": "web"
   },
   "project_details": {
-    "title_section_1": "Objectifs du projet",
-    "title_section_2": "Compétences travaillées",
-    "title_section_3": "Présentation visuel du projet"
+    "title_section_1": "Project goals",
+    "title_section_2": "Skills worked on",
+    "title_section_3": "Visual presentation of the project"
   },
   "project_details_1": {
     "description_section_1": "in progress...",

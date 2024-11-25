@@ -1,8 +1,8 @@
 <template>
   <div
-    class="inline-block px-5 py-0.5 rounded-xl text-white transition-all duration-500 ease-out"
+    class="inline-block px-5 py-0.5 rounded-xl transition-all duration-500 ease-out border-2 font-bold"
     :class="[bgColorClass]"
-    :style="animationStyle"
+    :style="[animationStyle, { 'text-transform': 'uppercase' }]"
   >
     {{ label }}
   </div>
@@ -25,8 +25,8 @@ export default {
   computed: {
     bgColorClass() {
       return {
-        "bg-blue-700": this.label === "web",
-        "bg-green-700": this.label === "mobile",
+        "border-blue-700 text-blue-700": this.label === "web",
+        "border-green-700": this.label === "mobile",
       };
     },
     animationStyle() {
