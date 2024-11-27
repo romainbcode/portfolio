@@ -11,36 +11,49 @@
         </div>
 
         <div class="flex flex-col justify-evenly">
-          <div class="flex flex-row items-center justify-between mb-6">
-            <div class="flex flex-row items-center space-x-5">
-              <div class="w-[50px] flex items-center justify-center">
-                <img
-                  :src="logo"
-                  alt="Project Image"
-                  class="h-auto w-full object-contain"
-                />
-              </div>
+          <div class="flex flex-row items-center justify-between">
+            <div
+              class="w-full flex flex-row items-center justify-center space-x-5"
+            >
+              <img
+                :src="logo"
+                alt="Project Image"
+                class="h-auto w-[75px] object-contain"
+              />
               <h1 class="font-bold text-3xl">
                 {{ titre }}
               </h1>
             </div>
-            <Projectlabel :label="label" :is-hovered="false" />
-          </div>
-          <div class="grid grid-cols-4 gap-2">
-            <Projecttool
-              v-for="(tool, index) in tools"
-              :key="index"
-              :name="tool.name"
-            />
+
+            <!--<Projectlabel :label="label" :is-hovered="false" />-->
           </div>
 
-          <div class="grid grid-cols-4 gap-2">
-            <Skill
-              v-for="(skill, index) in skills"
-              :key="index"
-              :name="skill.name"
-            />
+          <div class="flex flex-col">
+            <Divider :align="'left'" type="solid">
+              <b>{{ $t("project_details.technical_stack") }}</b>
+            </Divider>
+            <div class="grid grid-cols-4 gap-2">
+              <Projecttool
+                v-for="(tool, index) in tools"
+                :key="index"
+                :name="tool.name"
+              />
+            </div>
           </div>
+
+          <div class="flex flex-col">
+            <Divider :align="'left'" type="solid">
+              <b>{{ $t("project_details.tools") }}</b>
+            </Divider>
+            <div class="grid grid-cols-4 gap-2">
+              <Skill
+                v-for="(skill, index) in skills"
+                :key="index"
+                :name="skill.name"
+              />
+            </div>
+          </div>
+
           <div class="flex flex-row justify-end items-end space-x-4">
             <project-button-github :url="url" />
           </div>
@@ -52,7 +65,7 @@
       <Divider
         :pt="{
           root: {
-            style: 'border-top-width: 2px;', // Épaisseur du trait
+            style: 'border-top-width: 2px; width: 80%', // Épaisseur du trait
           },
         }"
       />
@@ -65,32 +78,22 @@
               {{ $t("project_details.title_section_1") }}
             </h3>
             <p>
-              Réalisé dans le cadre de mon projet de fin d'étude, EduVolution
-              consiste en une application de formation en ligne permettant aux
-              enseignants de créer et gérer des cours. Les élèves suivent les
-              cours à leur rythme et peuvent évaluer leur progression via des
-              quiz le tout relié à certains services Google.
+              {{ descriptionPresentation }}
             </p>
           </div>
 
-          <img :src="Presentation" class="h-[35rem] w-auto" />
+          <img :src="illustrationPresentation" class="h-[35rem] w-auto" />
         </div>
 
         <div class="flex flex-row items-center justify-between">
-          <img :src="Goals" class="h-[35rem] w-auto" />
+          <img :src="illustrationGoal" class="h-[35rem] w-auto" />
           <div class="flex flex-col w-full items-start space-y-5">
             <Target :size="40" />
             <h3 class="font-bold text-4xl">
               {{ $t("project_details.title_section_2") }}
             </h3>
             <p>
-              EduVolution vise à offrir une plateforme flexible pour la gestion
-              de la formation en ligne. Elle permet aux enseignants de suivre
-              les progrès des élèves, d’automatiser certaines tâches (comme
-              l’envoi d’emails) et de personnaliser l’expérience d’apprentissage
-              via un chatbot intelligent. L’intégration de services externes
-              comme Google Calendar et Google ClassRoom simplifie la gestion des
-              plannings et des contenus.
+              {{ descriptionObjectifs }}
             </p>
           </div>
         </div>
@@ -102,22 +105,17 @@
               {{ $t("project_details.title_section_3") }}
             </h3>
             <p>
-              Le projet a permis de développer des compétences en création de
-              microservices avec Node.js et Python, en intelligence artificielle
-              avec LLaMA-2, en sécurité avec Auth0 et en gestion des API Google.
-              Le développement de l'interface avec React.js et la gestion des
-              données via MongoDB ont aussi renforcé les compétences en
-              développement web et en bases de données.
+              {{ descriptionCompetences }}
             </p>
           </div>
-          <img :src="Studying" class="h-[35rem] w-auto" />
+          <img :src="illustrationStudying" class="h-[35rem] w-auto" />
         </div>
       </div>
 
       <Divider
         :pt="{
           root: {
-            style: 'border-top-width: 2px;', // Épaisseur du trait
+            style: 'border-top-width: 2px; width: 80%', // Épaisseur du trait
           },
         }"
       />
@@ -125,15 +123,18 @@
       <div class="mb-8"></div>
 
       <div class="flex flex-col justify-start w-2/3">
+        <div class="flex flex-col items-center w-full">
+          <h3 class="font-bold text-4xl">
+            {{ $t("project_details.title_section_4") }}
+          </h3>
+          <p class="text-lg text-gray-400 mt-4">
+            {{ $t("project_details.subtitle_section_4") }}
+          </p>
+        </div>
+
+        <div class="my-5"></div>
+
         <div id="videoSection">
-          <div class="flex justify-center">
-            <h3 class="font-bold text-4xl">
-              {{ $t("project_details.title_section_4") }}
-            </h3>
-          </div>
-
-          <div class="my-10"></div>
-
           <div class="h-[80vh]">
             <Video :mp4="video"></Video>
           </div>
@@ -209,7 +210,7 @@ export default {
       },
       { immediate: true }
     );
-
+    console.log(project.value);
     return {
       logo: computed(() => project.value.logo),
       url: computed(() => project.value.url),
@@ -217,11 +218,19 @@ export default {
       label: computed(() => project.value.label),
       tools: computed(() => project.value.tools as { name: ToolName }[]),
       skills: computed(() => project.value.skills as { name: ToolName }[]),
+      descriptionPresentation: computed(
+        () => project.value.descriptionPresentation
+      ),
       descriptionObjectifs: computed(() => project.value.descriptionObjectifs),
       descriptionCompetences: computed(
         () => project.value.descriptionCompetences
       ),
       video: computed(() => project.value.video),
+      illustrationGoal: computed(() => project.value.illustrationGoal),
+      illustrationPresentation: computed(
+        () => project.value.illustrationPresentation
+      ),
+      illustrationStudying: computed(() => project.value.illustrationStudying),
       Mac_Mockup,
       Goals,
       Studying,

@@ -126,18 +126,31 @@ export default {
       type: String,
       required: true,
     },
+    illustrationGoal: {
+      type: String,
+      required: true,
+    },
+    illustrationPresentation: {
+      type: String,
+      required: true,
+    },
+    illustrationStudying: {
+      type: String,
+      required: true,
+    },
   },
   setup(props: any) {
     const isHovered = ref(false);
 
     const hoverStyle = computed(() => {
-      return isHovered.value ? "cursor-pointer bg-slate-100" : "";
+      return isHovered.value ? "cursor-pointer bg-slate-200" : "";
     });
 
     const router = useRouter();
     const projectStore = useProjectStore();
     const { t } = useI18n();
     const navigateToDetail = () => {
+      console.log("props : ", props);
       projectStore.setCurrentProject({
         logo: props.photo,
         url: props.url,
@@ -145,13 +158,19 @@ export default {
         label: props.label,
         tools: props.tools,
         skills: props.skills,
-        descriptionObjectifs: t(
+        descriptionPresentation: t(
           "project_details_" + props.id + ".description_section_1"
         ),
-        descriptionCompetences: t(
+        descriptionObjectifs: t(
           "project_details_" + props.id + ".description_section_2"
         ),
+        descriptionCompetences: t(
+          "project_details_" + props.id + ".description_section_3"
+        ),
         video: props.video,
+        illustrationGoal: props.illustrationGoal,
+        illustrationPresentation: props.illustrationPresentation,
+        illustrationStudying: props.illustrationStudying,
       });
 
       router.push({

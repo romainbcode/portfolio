@@ -36,9 +36,13 @@
     "label": "web"
   },
   "project_details": {
-    "title_section_1": "Project goals",
-    "title_section_2": "Skills worked on",
-    "title_section_3": "Visual presentation of the project"
+    "technical_stack": "Technical stack",
+    "tools": "Tools",
+    "title_section_1": "project presentation",
+    "title_section_2": "Project goals",
+    "title_section_3": "Skills worked on",
+    "title_section_4": "Presentation of the project",
+    "subtitle_section_4": "Video offering an overview of the application to discover its features"
   },
   "project_details_1": {
     "description_section_1": "in progress...",

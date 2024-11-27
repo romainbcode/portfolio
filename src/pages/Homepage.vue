@@ -102,6 +102,9 @@
               { name: SkillName.GoogleApis },
               { name: SkillName.Trello },
             ]"
+            :illustrationGoal="IllustrationEduvolutionGoal"
+            :illustrationPresentation="IllustrationEduvolutionPresentation"
+            :illustrationStudying="IllustrationEduvolutionStudying"
             :video="PFE_video"
           />
 
@@ -126,6 +129,9 @@
               { name: SkillName.MicroServices },
               { name: SkillName.WebScraping },
             ]"
+            :illustrationGoal="IllustrationEduvolutionGoal"
+            :illustrationPresentation="IllustrationEduvolutionPresentation"
+            :illustrationStudying="IllustrationEduvolutionStudying"
             :video="PFE_video"
           />
         </div>
@@ -150,6 +156,10 @@ import ProjectTool from "@/components/project/Projecttool.vue";
 import Skill from "@/components/skill/Skill.vue";
 import SocialNetwork from "@/components/SocialNetwork.vue";
 import CloudWords from "@/components/CloudWords.vue";
+
+import IllustrationEduvolutionGoal from "@/assets/illustrations_Eduvolution/illustration_Eduvolution_goal.png";
+import IllustrationEduvolutionPresentation from "@/assets/illustrations_Eduvolution/illustration_Eduvolution_presentation.png";
+import IllustrationEduvolutionStudying from "@/assets/illustrations_Eduvolution/illustration_Eduvolution_studying.png";
 
 import PFE_video from "@/assets/project_video/PFE.mp4";
 
@@ -239,6 +249,9 @@ export default {
       SkillName,
       PFE_video,
       BombeLogo,
+      IllustrationEduvolutionGoal,
+      IllustrationEduvolutionPresentation,
+      IllustrationEduvolutionStudying,
     };
   },
 };
