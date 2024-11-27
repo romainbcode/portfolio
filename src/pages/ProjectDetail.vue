@@ -2,9 +2,9 @@
   <div class="relative">
     <div class="flex flex-col items-center">
       <div class="flex flex-row justify-center space-x-5 mb-6">
-        <div class="w-[30%] flex items-center justify-center">
+        <div class="w-[50%] flex items-center justify-center">
           <img
-            :src="logo"
+            :src="Mac_Mockup"
             alt="Project Image"
             class="h-auto w-full object-contain"
           />
@@ -12,9 +12,18 @@
 
         <div class="flex flex-col justify-evenly">
           <div class="flex flex-row items-center justify-between mb-6">
-            <h1 class="font-bold text-3xl">
-              {{ titre }}
-            </h1>
+            <div class="flex flex-row items-center space-x-5">
+              <div class="w-[50px] flex items-center justify-center">
+                <img
+                  :src="logo"
+                  alt="Project Image"
+                  class="h-auto w-full object-contain"
+                />
+              </div>
+              <h1 class="font-bold text-3xl">
+                {{ titre }}
+              </h1>
+            </div>
             <Projectlabel :label="label" :is-hovered="false" />
           </div>
           <div class="grid grid-cols-4 gap-2">
@@ -24,6 +33,7 @@
               :name="tool.name"
             />
           </div>
+
           <div class="grid grid-cols-4 gap-2">
             <Skill
               v-for="(skill, index) in skills"
@@ -37,27 +47,92 @@
         </div>
       </div>
 
+      <div class="mt-8"></div>
+
+      <Divider
+        :pt="{
+          root: {
+            style: 'border-top-width: 2px;', // Épaisseur du trait
+          },
+        }"
+      />
+
+      <div class="flex flex-col w-3/4">
+        <div class="flex flex-row items-center justify-between">
+          <div class="flex flex-col w-full items-start space-y-5">
+            <Telescope :size="40" />
+            <h3 class="font-bold text-4xl">
+              {{ $t("project_details.title_section_1") }}
+            </h3>
+            <p>
+              Réalisé dans le cadre de mon projet de fin d'étude, EduVolution
+              consiste en une application de formation en ligne permettant aux
+              enseignants de créer et gérer des cours. Les élèves suivent les
+              cours à leur rythme et peuvent évaluer leur progression via des
+              quiz le tout relié à certains services Google.
+            </p>
+          </div>
+
+          <img :src="Presentation" class="h-[35rem] w-auto" />
+        </div>
+
+        <div class="flex flex-row items-center justify-between">
+          <img :src="Goals" class="h-[35rem] w-auto" />
+          <div class="flex flex-col w-full items-start space-y-5">
+            <Target :size="40" />
+            <h3 class="font-bold text-4xl">
+              {{ $t("project_details.title_section_2") }}
+            </h3>
+            <p>
+              EduVolution vise à offrir une plateforme flexible pour la gestion
+              de la formation en ligne. Elle permet aux enseignants de suivre
+              les progrès des élèves, d’automatiser certaines tâches (comme
+              l’envoi d’emails) et de personnaliser l’expérience d’apprentissage
+              via un chatbot intelligent. L’intégration de services externes
+              comme Google Calendar et Google ClassRoom simplifie la gestion des
+              plannings et des contenus.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex flex-row items-center justify-between">
+          <div class="flex flex-col w-full items-start space-y-5">
+            <BrainCog :size="40" />
+            <h3 class="font-bold text-4xl">
+              {{ $t("project_details.title_section_3") }}
+            </h3>
+            <p>
+              Le projet a permis de développer des compétences en création de
+              microservices avec Node.js et Python, en intelligence artificielle
+              avec LLaMA-2, en sécurité avec Auth0 et en gestion des API Google.
+              Le développement de l'interface avec React.js et la gestion des
+              données via MongoDB ont aussi renforcé les compétences en
+              développement web et en bases de données.
+            </p>
+          </div>
+          <img :src="Studying" class="h-[35rem] w-auto" />
+        </div>
+      </div>
+
+      <Divider
+        :pt="{
+          root: {
+            style: 'border-top-width: 2px;', // Épaisseur du trait
+          },
+        }"
+      />
+
+      <div class="mb-8"></div>
+
       <div class="flex flex-col justify-start w-2/3">
-        <h3 class="font-bold text-2xl">
-          {{ $t("project_details.title_section_1") }}
-        </h3>
-        <Divider />
-        <p class="description-text">{{ descriptionObjectifs }}</p>
-
-        <div class="my-8"></div>
-
-        <h3 class="font-bold text-2xl">
-          {{ $t("project_details.title_section_2") }}
-        </h3>
-        <Divider />
-        <p>{{ descriptionCompetences }}</p>
-
-        <div class="my-8"></div>
         <div id="videoSection">
-          <h3 class="font-bold text-2xl">
-            {{ $t("project_details.title_section_3") }}
-          </h3>
-          <Divider />
+          <div class="flex justify-center">
+            <h3 class="font-bold text-4xl">
+              {{ $t("project_details.title_section_4") }}
+            </h3>
+          </div>
+
+          <div class="my-10"></div>
 
           <div class="h-[80vh]">
             <Video :mp4="video"></Video>
@@ -91,9 +166,17 @@ import Projecttool from "@/components/project/Projecttool.vue";
 import Video from "@/components/Video.vue";
 
 import { Camera } from "lucide-vue-next";
+import { Telescope } from "lucide-vue-next";
+import { Target } from "lucide-vue-next";
+import { BrainCog } from "lucide-vue-next";
 
 import { ToolName } from "@/enums/ToolColor";
 import { SkillName } from "@/enums/SkillColor";
+
+import Mac_Mockup from "@/assets/mac_mockup.png";
+import Goals from "@/assets/goal_illustration.png";
+import Presentation from "@/assets/presentation_illustration.png";
+import Studying from "@/assets/studying_illustration.png";
 
 export default {
   components: {
@@ -102,10 +185,14 @@ export default {
     ProjectButtonGithub,
     Skill,
     Camera,
+    Telescope,
+    Target,
+    BrainCog,
     Video,
   },
   enums: {
-    ToolName, SkillName
+    ToolName,
+    SkillName,
   },
   setup() {
     const router = useRouter();
@@ -135,6 +222,10 @@ export default {
         () => project.value.descriptionCompetences
       ),
       video: computed(() => project.value.video),
+      Mac_Mockup,
+      Goals,
+      Studying,
+      Presentation,
     };
   },
   methods: {

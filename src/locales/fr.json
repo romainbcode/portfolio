@@ -13,7 +13,7 @@
     "title_section_1": "Compétences",
     "button_softskill": "Voir les soft Skills",
     "button_hardskill": "Voir les hard Skills",
-    "title_section_2": "Projets"
+    "title_section_2": "Mes projets"
   },
   "buttons_label": {
     "github": "Voir le code"
@@ -36,9 +36,10 @@
     "label": "web"
   },
   "project_details": {
-    "title_section_1": "Objectifs du projet",
-    "title_section_2": "Compétences travaillées",
-    "title_section_3": "Présentation visuel du projet"
+    "title_section_1": "Présentation du projet",
+    "title_section_2": "Objectifs du projet",
+    "title_section_3": "Compétences travaillées",
+    "title_section_4": "Présentation visuel du projet"
   },
   "project_details_1": {
     "description_section_1": "Le projet EduVolution a pour objectif de développer une application de formation en ligne permettant aux professeurs de créer et de gérer des formations pour les élèves. Ces derniers peuvent suivre les cours à leur rythme tout en réalisant des quizs pour évaluer leur progression. L'application repose sur une architecture basée sur plusieurs microservices, dont le principal est développé avec Node.js. Deux autres microservices en Python sont responsables de l’envoi automatisé de mails et de la gestion de l’intelligence artificielle qui anime un chatbot pour accompagner les utilisateurs. Ce chatbot génère des réponses en utilisant le modèle LLaMA-2 de Meta. L'application intègre également des services Google, comme Google Calendar et Google Classroom, pour faciliter la gestion des plannings de cours et la synchronisation des contenus pédagogiques. L’objectif est d’offrir une plateforme intuitive et interactive, où les enseignants peuvent suivre l’évolution de leurs élèves et ajuster les formations en fonction de leurs besoins.",

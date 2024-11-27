@@ -22,7 +22,7 @@
     <div class="w-3/4 flex flex-col align-start justify-center my-1 mx-4">
       <h2 class="text-xl font-bold mb-2 text-4xl">{{ title }}</h2>
       <TruncatedDescription :description="description" />
-      <div class="flex flex-col space-y-2">
+      <div class="flex flex-col">
         <div class="flex flex-row space-x-2">
           <Projecttool
             v-for="(tool, index) in tools"
@@ -30,6 +30,17 @@
             :name="tool.name"
           />
         </div>
+
+        <Divider
+          :pt="{
+            root: {
+              style: `width: ${Math.max(tools.length, skills.length) * 80}px; 
+              margin-top: 0.5rem; 
+              margin-bottom: 0.5rem`,
+            },
+          }"
+        />
+
         <div class="flex flex-row space-x-2">
           <Skill
             v-for="(skill, index) in skills"

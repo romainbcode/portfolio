@@ -12,6 +12,7 @@
               {{ $t("home.title_2") }}
             </span>
           </h1>
+          <div class="h-10"></div>
           <p class="text-lg text-gray-500 my-4 text-justify space-y-2">
             {{ $t("home.description_1") }}
             <span>{{ $t("home.description_2") }}</span>
@@ -39,7 +40,7 @@
       </div>
     </div>
     <div class="my-10"></div>
-    <div class="flex justify-center w-full">
+    <!--<div class="flex justify-center w-full">
       <div class="flex-col mb-10 w-2/3">
         <div class="flex flex-row justify-between">
           <h3 class="font-bold text-2xl">
@@ -54,7 +55,7 @@
       </div>
     </div>
 
-    <!--<div class="flex justify-center">
+    <div class="flex justify-center">
       <div class="my-20 w-[60%]">
         <Vue3Marquee direction="normal" :duration="15" :pauseOnHover="true">
           <div class="flex space-x-8">
