@@ -29,7 +29,7 @@
           </div>
 
           <div class="flex flex-col">
-            <Divider :align="'left'" type="solid">
+            <Divider :align="'left'" type="solid" style="--p-divider-content-background: #f8fafc;">
               <b>{{ $t("project_details.technical_stack") }}</b>
             </Divider>
             <div class="grid grid-cols-4 gap-2">
@@ -42,7 +42,7 @@
           </div>
 
           <div class="flex flex-col">
-            <Divider :align="'left'" type="solid">
+            <Divider :align="'left'" type="solid" style="--p-divider-content-background: #f8fafc;">
               <b>{{ $t("project_details.tools") }}</b>
             </Divider>
             <div class="grid grid-cols-4 gap-2">
@@ -175,9 +175,6 @@ import { ToolName } from "@/enums/ToolColor";
 import { SkillName } from "@/enums/SkillColor";
 
 import Mac_Mockup from "@/assets/mac_mockup.png";
-import Goals from "@/assets/goal_illustration.png";
-import Presentation from "@/assets/presentation_illustration.png";
-import Studying from "@/assets/studying_illustration.png";
 
 export default {
   components: {
@@ -232,9 +229,6 @@ export default {
       ),
       illustrationStudying: computed(() => project.value.illustrationStudying),
       Mac_Mockup,
-      Goals,
-      Studying,
-      Presentation,
     };
   },
   methods: {

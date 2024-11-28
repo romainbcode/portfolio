@@ -1,6 +1,6 @@
 <template>
   <div
-    class="inline-block px-5 py-0.5 rounded-xl transition-all duration-500 ease-out border-2 font-bold"
+    class="inline-block px-5 py-0.5 rounded-xl transition-all duration-500 ease-out font-bold"
     :class="[bgColorClass]"
     :style="[animationStyle, { 'text-transform': 'uppercase' }]"
   >
@@ -25,8 +25,8 @@ export default {
   computed: {
     bgColorClass() {
       return {
-        "border-blue-700 text-blue-700": this.label === "web",
-        "border-green-700": this.label === "mobile",
+        "bg-blue-200 text-blue-700": this.label === "web",
+        "bg-green-200 text-green-700": this.label === "mobile",
       };
     },
     animationStyle() {

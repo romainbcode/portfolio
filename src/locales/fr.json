@@ -35,6 +35,11 @@
     "description": "Application de paris sportifs affichant les résultats des matchs et les classements des 5 grands championnats d'Europe via web scraping et permettant de parier.",
     "label": "web"
   },
+  "project_3": {
+    "title": "Assistant Agent Immobilier",
+    "description": "en cours...",
+    "label": "web"
+  },
   "project_details": {
     "technical_stack": "Stack technique",
     "tools": "Outils",
@@ -51,6 +56,7 @@
   },
   "project_details_2": {
     "description_section_1": "Ce projet simule un site de paris sportifs avec les classements et resultats des matchs des 5 grands championnats récupérés grâce à du web scrapping.\nLe backend possède une API Rest developpé en python. Le frontend lui est développé avec Vuejs.\n Deux bases de données ont été utilisées dans ce projet, une base de donnée non relationnelle : redis et une base de donnée relationnelle : SQLiteStudio.\n Ce projet possède différentes pages telle qu'une interface de connexion et d'inscription, une page d'accueil où il est possible de voir le classement et les matchs d'une journée d'un championnat.\n Il est également possible de voir l'historique des différents paris effectués.",
-    "description_section_2": "en cours...."
+    "description_section_2": "en cours....",
+    "description_section_3": "en cours..."
   }
 }

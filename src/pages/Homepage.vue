@@ -34,48 +34,16 @@
           </div>
         </div>
       </div>
-      <div class="w-[5%]"></div>
+
+      <div class="w-[5rem]"></div>
+
       <div class="w-[35%]">
         <div class="photo_profil_mouvement"></div>
       </div>
     </div>
-    <div class="my-10"></div>
-    <!--<div class="flex justify-center w-full">
-      <div class="flex-col mb-10 w-2/3">
-        <div class="flex flex-row justify-between">
-          <h3 class="font-bold text-2xl">
-            {{ $t("home.title_section_1") }}
-          </h3>
-          <button @click="triggerExplosionFromParent" class="easter-egg-button">
-            <img :src="BombeLogo" class="h-5 w-auto" />
-          </button>
-        </div>
-        <Divider />
-        <CloudWords ref="child"></CloudWords>
-      </div>
-    </div>
 
-    <div class="flex justify-center">
-      <div class="my-20 w-[60%]">
-        <Vue3Marquee direction="normal" :duration="15" :pauseOnHover="true">
-          <div class="flex space-x-8">
-            <div v-for="(softskill, index) in softskills" :key="index">
-              <ProjectTool :name="softskill.name" />
-            </div>
-          </div>
-          <div class="px-4"></div>
-        </Vue3Marquee>
-        <div class="my-4"></div>
-        <Vue3Marquee direction="reverse" :duration="14" :pauseOnHover="true">
-          <div class="flex space-x-8">
-            <div v-for="(skill, index) in skills" :key="index">
-              <Skill :name="skill.name" />
-            </div>
-          </div>
-          <div class="px-4"></div>
-        </Vue3Marquee>
-      </div>
-    </div>-->
+    <div class="my-10"></div>
+
     <div class="flex justify-center w-full">
       <div class="flex-col mb-10 w-2/3">
         <h3 class="font-bold text-2xl">
@@ -129,9 +97,32 @@
               { name: SkillName.MicroServices },
               { name: SkillName.WebScraping },
             ]"
-            :illustrationGoal="IllustrationEduvolutionGoal"
-            :illustrationPresentation="IllustrationEduvolutionPresentation"
-            :illustrationStudying="IllustrationEduvolutionStudying"
+            :illustrationGoal="IllustrationPariGoal"
+            :illustrationPresentation="IllustrationPariPresentation"
+            :illustrationStudying="IllustrationPariStudying"
+            :video="PFE_video"
+          />
+
+          <Project
+            :id="'3'"
+            :photo="PFE"
+            :url="'https://github.com/romainbcode/TP_Projet_AgentImmobilierIA'"
+            :label="$t('project_3.label')"
+            :title="$t('project_3.title')"
+            :description="$t('project_3.description')"
+            :tools="[
+              { name: ToolName.ReactJS },
+              { name: ToolName.Python },
+              { name: ToolName.IntelligenceArtificielle },
+            ]"
+            :skills="[
+              { name: SkillName.Figma },
+              { name: SkillName.MicroServices },
+              { name: SkillName.Git },
+            ]"
+            :illustrationGoal="IllustrationIAAgentImmobGoal"
+            :illustrationPresentation="IllustrationIAAgentImmobPresentation"
+            :illustrationStudying="IllustrationIAAgentImmobStudying"
             :video="PFE_video"
           />
         </div>
@@ -149,19 +140,24 @@ import { Vue3Marquee } from "vue3-marquee";
 import franceLogo from "@/assets/france_logo.png";
 import pari from "@/assets/project_logo/pari.png";
 import PFE from "@/assets/project_logo/PFE.png";
-import BombeLogo from "@/assets/bombe.png";
 
 import Project from "@/components/project/Project.vue";
 import ProjectTool from "@/components/project/Projecttool.vue";
 import Skill from "@/components/skill/Skill.vue";
 import SocialNetwork from "@/components/SocialNetwork.vue";
-import CloudWords from "@/components/CloudWords.vue";
 
 import IllustrationEduvolutionGoal from "@/assets/illustrations_Eduvolution/illustration_Eduvolution_goal.png";
 import IllustrationEduvolutionPresentation from "@/assets/illustrations_Eduvolution/illustration_Eduvolution_presentation.png";
 import IllustrationEduvolutionStudying from "@/assets/illustrations_Eduvolution/illustration_Eduvolution_studying.png";
-
 import PFE_video from "@/assets/project_video/PFE.mp4";
+
+import IllustrationPariGoal from "@/assets/illustrations_Pari/illustration_Pari_goal.png";
+import IllustrationPariPresentation from "@/assets/illustrations_Pari/illustration_Pari_presentation.png";
+import IllustrationPariStudying from "@/assets/illustrations_Pari/illustration_Pari_studying.png";
+
+import IllustrationIAAgentImmobGoal from "@/assets/illustrations_IA-AgentImmob/illustration_IA-AgentImmob_goal.png";
+import IllustrationIAAgentImmobPresentation from "@/assets/illustrations_IA-AgentImmob/illustration_IA-AgentImmob_presentation.png";
+import IllustrationIAAgentImmobStudying from "@/assets/illustrations_IA-AgentImmob/illustration_IA-AgentImmob_studying.png";
 
 export default {
   components: {
@@ -170,7 +166,6 @@ export default {
     Skill,
     ProjectTool,
     SocialNetwork,
-    CloudWords,
   },
   methods: {
     triggerExplosionFromParent() {
@@ -248,10 +243,15 @@ export default {
       ToolName,
       SkillName,
       PFE_video,
-      BombeLogo,
       IllustrationEduvolutionGoal,
       IllustrationEduvolutionPresentation,
       IllustrationEduvolutionStudying,
+      IllustrationPariGoal,
+      IllustrationPariPresentation,
+      IllustrationPariStudying,
+      IllustrationIAAgentImmobGoal,
+      IllustrationIAAgentImmobPresentation,
+      IllustrationIAAgentImmobStudying,
     };
   },
 };
