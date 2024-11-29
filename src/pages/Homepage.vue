@@ -1,18 +1,25 @@
 <template>
   <div class="mx-auto m-0 w-5/6">
-    <div class="flex flex-row justify-center center-item w-full">
-      <div class="flex flex-col justify-center items-center w-[60%]">
-        <div class="text-start">
-          <h1 class="text-7xl font-bold tracking-wide leading-tight">
+    <div class="flex flex-col md:flex-row justify-center center-item w-full">
+      <div class="flex flex-col justify-center items-center w-full md:w-[60%]">
+        <div class="text-center md:text-start space-y-10">
+          <h1
+            class="text-3xl md:text-7xl font-bold tracking-wide leading-tight"
+          >
             {{ $t("home.title_1") }}<br />
             <span class="relative">
               <span
-                class="absolute -inset-x-3 bottom-1 h-12 bg-gray-300 -z-10"
+                class="absolute -inset-x-3 bottom-1 h-9 md:h-12 bg-gray-300 -z-10"
               ></span>
               {{ $t("home.title_2") }}
             </span>
           </h1>
-          <div class="h-10"></div>
+
+          <div class="block md:hidden">
+            <div class="md:ml-5 flex items-center justify-center">
+              <div class="photo_profil_mouvement"></div>
+            </div>
+          </div>
           <p class="text-lg text-gray-500 my-4 text-justify space-y-2">
             {{ $t("home.description_1") }}
             <span>{{ $t("home.description_2") }}</span>
@@ -20,36 +27,45 @@
             <span> {{ $t("home.description_3") }}</span>
           </p>
         </div>
-        <div class="w-3/4 my-10">
+        <div class="w-full mt-10">
           <div class="flex flex-row justify-evenly items-center justify-center">
             <SocialNetwork />
-            <p class="flex flex-row items-center space-x-2">
-              <span>Lyon</span>
-              <img
-                :src="franceLogo"
-                alt="France logo"
-                class="h-auto w-[40px]"
-              />
-            </p>
+            <img :src="franceLogo" alt="France logo" class="h-auto w-[40px]" />
           </div>
         </div>
       </div>
-
-      <div class="w-[5rem]"></div>
-
-      <div class="w-[35%]">
-        <div class="photo_profil_mouvement"></div>
+      <div class="hidden md:block">
+        <div class="ml-5 flex items-center justify-center">
+          <div class="photo_profil_mouvement"></div>
+        </div>
       </div>
     </div>
 
-    <div class="my-10"></div>
+    <div class="my-5"></div>
 
-    <div class="flex justify-center w-full">
-      <div class="flex-col mb-10 w-2/3">
-        <h3 class="font-bold text-2xl">
+    <div class="flex flex-col items-center w-full">
+      <Divider
+        :pt="{
+          root: {
+            style: 'border-top-width: 2px; width: 80%; border-color: #e5e7eb', // Épaisseur du trait
+          },
+        }"
+      />
+
+      <div class="h-[2rem]"></div>
+
+      <div class="flex flex-col items-center w-full">
+        <h3 class="font-bold text-2xl md:text-4xl">
           {{ $t("home.title_section_2") }}
         </h3>
-        <Divider />
+        <p class="text-base md:text-lg text-gray-400 mt-4 text-justify">
+          {{ $t("home.subtitle_section_4") }}
+        </p>
+      </div>
+
+      <div class="h-[4rem]"></div>
+
+      <div class="flex-col mb-10 w-2/3">
         <div class="my-4 grid gap-4 flex justify-center">
           <Project
             :id="'1'"
@@ -270,6 +286,14 @@ export default {
   transition: all 1s ease-in-out;
   width: 25rem;
 }
+
+@media (max-width: 768px) {
+  .photo_profil_mouvement {
+    height: 20rem;
+    width: 20rem;
+  }
+}
+
 @keyframes morph {
   0% {
     border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;

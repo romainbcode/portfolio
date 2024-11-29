@@ -1,6 +1,6 @@
 <template>
   <div
-    class="relative flex flex-row max-w-[800px] rounded-xl bg-white p-1"
+    class="relative flex flex-row min-w-[300px] rounded-xl bg-white p-1"
     :class="hoverStyle"
     @mouseenter="isHovered = true"
     @mouseleave="isHovered = false"
@@ -11,19 +11,33 @@
       :is-hovered="isHovered"
       class="absolute top-2 -right-8"
     />
-    <div class="w-1/4 flex items-center justify-center ml-1">
+    <div class="hidden md:block w-1/4 flex items-center justify-center">
       <img
         :src="photo"
         alt="Project Image"
-        class="h-auto w-full object-contain"
+        class="h-full w-auto object-contain"
       />
     </div>
 
-    <div class="w-3/4 flex flex-col align-start justify-center my-1 mx-4">
-      <h2 class="text-xl font-bold mb-2 text-4xl">{{ title }}</h2>
+    <div
+      class="w-full md:w-3/4 flex flex-col align-start justify-center my-1 mx-4"
+    >
+      <div class="flex flex-row items-center">
+        <div
+          class="block md:hidden w-1/4 flex items-center justify-center mr-5"
+        >
+          <img
+            :src="photo"
+            alt="Project Image"
+            class="h-auto w-full object-contain"
+          />
+        </div>
+        <h2 class="text-xl font-bold mb-2 text-4xl">{{ title }}</h2>
+      </div>
+
       <TruncatedDescription :description="description" />
       <div class="flex flex-col">
-        <div class="flex flex-row space-x-2">
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-2">
           <Projecttool
             v-for="(tool, index) in tools"
             :key="index"
@@ -34,14 +48,13 @@
         <Divider
           :pt="{
             root: {
-              style: `width: ${Math.max(tools.length, skills.length) * 80}px; 
-              margin-top: 0.5rem; 
-              margin-bottom: 0.5rem`,
+              style:
+                'border-top-width: 1px; width: 100%; border-color: #e5e7eb', // Épaisseur du trait
             },
           }"
         />
 
-        <div class="flex flex-row space-x-2">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-2">
           <Skill
             v-for="(skill, index) in skills"
             :key="index"

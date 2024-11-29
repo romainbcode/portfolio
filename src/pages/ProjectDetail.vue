@@ -1,8 +1,20 @@
 <template>
-  <div class="relative">
+  <div class="relative mb-10 mx-10">
     <div class="flex flex-col items-center">
-      <div class="flex flex-row justify-center space-x-5 mb-6">
-        <div class="w-[50%] flex items-center justify-center">
+      <div
+        class="block md:hidden w-full flex flex-col md:flex-row items-center justify-center md:space-x-5 space-y-5"
+      >
+        <img
+          :src="logo"
+          alt="Project Image"
+          class="h-auto w-[75px] object-contain"
+        />
+        <h1 class="font-bold text-3xl text-center">
+          {{ titre }}
+        </h1>
+      </div>
+      <div class="flex flex-col md:flex-row justify-center mb-6">
+        <div class="w-full md:w-[50%] flex items-center justify-center">
           <img
             :src="Mac_Mockup"
             alt="Project Image"
@@ -11,7 +23,9 @@
         </div>
 
         <div class="flex flex-col justify-evenly">
-          <div class="flex flex-row items-center justify-between">
+          <div
+            class="hidden md:block flex flex-row items-center justify-between"
+          >
             <div
               class="w-full flex flex-row items-center justify-center space-x-5"
             >
@@ -24,15 +38,17 @@
                 {{ titre }}
               </h1>
             </div>
-
-            <!--<Projectlabel :label="label" :is-hovered="false" />-->
           </div>
 
           <div class="flex flex-col">
-            <Divider :align="'left'" type="solid" style="--p-divider-content-background: #f8fafc;">
+            <Divider
+              :align="'left'"
+              type="solid"
+              style="--p-divider-content-background: #f8fafc"
+            >
               <b>{{ $t("project_details.technical_stack") }}</b>
             </Divider>
-            <div class="grid grid-cols-4 gap-2">
+            <div class="grid grid-cols-3 md:grid-cols-3 gap-2">
               <Projecttool
                 v-for="(tool, index) in tools"
                 :key="index"
@@ -42,10 +58,14 @@
           </div>
 
           <div class="flex flex-col">
-            <Divider :align="'left'" type="solid" style="--p-divider-content-background: #f8fafc;">
+            <Divider
+              :align="'left'"
+              type="solid"
+              style="--p-divider-content-background: #f8fafc"
+            >
               <b>{{ $t("project_details.tools") }}</b>
             </Divider>
-            <div class="grid grid-cols-4 gap-2">
+            <div class="grid grid-cols-3 md:grid-cols-4 gap-2">
               <Skill
                 v-for="(skill, index) in skills"
                 :key="index"
@@ -53,91 +73,101 @@
               />
             </div>
           </div>
-
-          <div class="flex flex-row justify-end items-end space-x-4">
+          <div class="h-8"></div>
+          <div
+            class="flex flex-row justify-center md:justify-end items-end space-x-4"
+          >
             <project-button-github :url="url" />
           </div>
         </div>
       </div>
 
-      <div class="mt-8"></div>
-
       <Divider
         :pt="{
           root: {
-            style: 'border-top-width: 2px; width: 80%', // Épaisseur du trait
+            style: 'border-top-width: 2px; width: 80%; border-color: #e5e7eb',
           },
         }"
       />
 
-      <div class="flex flex-col w-3/4">
-        <div class="flex flex-row items-center justify-between">
+      <div class="flex flex-col space-y-20 md:space-y-0">
+        <div
+          class="flex flex-col-reverse md:flex-row items-center justify-between"
+        >
           <div class="flex flex-col w-full items-start space-y-5">
             <Telescope :size="40" />
-            <h3 class="font-bold text-4xl">
+            <h3 class="font-bold text-2xl md:text-4xl">
               {{ $t("project_details.title_section_1") }}
             </h3>
-            <p>
+            <p class="text-justify">
               {{ descriptionPresentation }}
             </p>
           </div>
 
-          <img :src="illustrationPresentation" class="h-[35rem] w-auto" />
+          <img
+            :src="illustrationPresentation"
+            class="h-[20rem] md:h-[35rem] w-auto"
+          />
         </div>
 
-        <div class="flex flex-row items-center justify-between">
-          <img :src="illustrationGoal" class="h-[35rem] w-auto" />
+        <div class="flex flex-col md:flex-row items-center justify-between">
+          <img :src="illustrationGoal" class="h-[20rem] md:h-[35rem] w-auto" />
           <div class="flex flex-col w-full items-start space-y-5">
             <Target :size="40" />
-            <h3 class="font-bold text-4xl">
+            <h3 class="font-bold text-2xl md:text-4xl">
               {{ $t("project_details.title_section_2") }}
             </h3>
-            <p>
+            <p class="text-justify">
               {{ descriptionObjectifs }}
             </p>
           </div>
         </div>
 
-        <div class="flex flex-row items-center justify-between">
+        <div
+          class="flex flex-col-reverse md:flex-row items-center justify-between"
+        >
           <div class="flex flex-col w-full items-start space-y-5">
             <BrainCog :size="40" />
-            <h3 class="font-bold text-4xl">
+            <h3 class="font-bold text-2xl md:text-4xl">
               {{ $t("project_details.title_section_3") }}
             </h3>
-            <p>
+            <p class="text-justify">
               {{ descriptionCompetences }}
             </p>
           </div>
-          <img :src="illustrationStudying" class="h-[35rem] w-auto" />
+          <img
+            :src="illustrationStudying"
+            class="h-[20rem] md:h-[35rem] w-auto"
+          />
         </div>
       </div>
+
+      <div class="h-5"></div>
 
       <Divider
         :pt="{
           root: {
-            style: 'border-top-width: 2px; width: 80%', // Épaisseur du trait
+            style: 'border-top-width: 2px; width: 80%; border-color: #e5e7eb',
           },
         }"
       />
 
-      <div class="mb-8"></div>
+      <div class="h-[2rem]"></div>
 
-      <div class="flex flex-col justify-start w-2/3">
+      <div class="flex flex-col justify-start">
         <div class="flex flex-col items-center w-full">
-          <h3 class="font-bold text-4xl">
+          <h3 class="font-bold text-2xl md:text-4xl">
             {{ $t("project_details.title_section_4") }}
           </h3>
-          <p class="text-lg text-gray-400 mt-4">
+          <p class="text-base md:text-lg text-gray-400 mt-4 text-justify">
             {{ $t("project_details.subtitle_section_4") }}
           </p>
         </div>
 
-        <div class="my-5"></div>
+        <div class="h-[4rem]"></div>
 
-        <div id="videoSection">
-          <div class="h-[80vh]">
-            <Video :mp4="video"></Video>
-          </div>
+        <div id="videoSection" class="w-[100%] h-auto">
+          <Video :mp4="video"></Video>
         </div>
       </div>
     </div>

@@ -13,7 +13,8 @@
     "title_section_1": "Compétences",
     "button_softskill": "Voir les soft Skills",
     "button_hardskill": "Voir les hard Skills",
-    "title_section_2": "Mes projets"
+    "title_section_2": "Mes projets",
+    "subtitle_section_4": "L'ensemble de mes projets personnels, accompagnés des technologies utilisées et d'une vidéo de présentation."
   },
   "buttons_label": {
     "github": "Voir le code"
