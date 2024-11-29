@@ -44,7 +44,10 @@
             <Divider
               :align="'left'"
               type="solid"
-              style="--p-divider-content-background: #f8fafc"
+              style="
+                --p-divider-content-background: #f8fafc;
+                --p-divider-content-color: black;
+              "
             >
               <b>{{ $t("project_details.technical_stack") }}</b>
             </Divider>
@@ -61,7 +64,10 @@
             <Divider
               :align="'left'"
               type="solid"
-              style="--p-divider-content-background: #f8fafc"
+              style="
+                --p-divider-content-background: #f8fafc;
+                --p-divider-content-color: black;
+              "
             >
               <b>{{ $t("project_details.tools") }}</b>
             </Divider>
