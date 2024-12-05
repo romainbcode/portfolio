@@ -38,7 +38,7 @@
   },
   "project_3": {
     "title": "Assistant Agent Immobilier",
-    "description": "en cours...",
+    "description": "Assistant d'agent immobilier de Calgary offrant une estimation de la valeur d'un bien en fonction de différents critères.",
     "label": "web"
   },
   "project_details": {
@@ -51,13 +51,18 @@
     "subtitle_section_4": "Vidéo offrant une vue d'ensemble de l'application pour en découvrir les fonctionnalités"
   },
   "project_details_1": {
-    "description_section_1": "Réalisé dans le cadre de mon projet de fin d'étude, EduVolution consiste en une application de formation en ligne permettant aux enseignants de créer et gérer des cours. Les élèves suivent les cours à leur rythme et peuvent évaluer leur progression via des quiz le tout relié à certains services Google.",
+    "description_section_1": "Réalisé dans le cadre de mon projet de fin d'étude, EduVolution est une application de formation en ligne permettant aux enseignants de créer et gérer des cours. Les élèves suivent les cours à leur rythme et peuvent évaluer leur progression via des quiz le tout relié à certains services Google.",
     "description_section_2": "EduVolution vise à offrir une plateforme flexible pour la gestion de la formation en ligne. Elle permet aux enseignants de suivre les progrès des élèves, d’automatiser certaines tâches (comme l’envoi d’emails) et de personnaliser l’expérience d’apprentissage via un chatbot intelligent. L’intégration de services externes comme Google Calendar et Google ClassRoom simplifie la gestion des plannings et des contenus.",
     "description_section_3": "Le projet a permis de développer des compétences en création de microservices avec Node.js et Python, en intelligence artificielle avec LLaMA-2, en sécurité avec Auth0 et en gestion des API Google. Le développement de l'interface avec React.js et la gestion des données via MongoDB ont aussi renforcé les compétences en développement web et en bases de données."
   },
   "project_details_2": {
-    "description_section_1": "Ce projet simule un site de paris sportifs avec les classements et resultats des matchs des 5 grands championnats récupérés grâce à du web scrapping.\nLe backend possède une API Rest developpé en python. Le frontend lui est développé avec Vuejs.\n Deux bases de données ont été utilisées dans ce projet, une base de donnée non relationnelle : redis et une base de donnée relationnelle : SQLiteStudio.\n Ce projet possède différentes pages telle qu'une interface de connexion et d'inscription, une page d'accueil où il est possible de voir le classement et les matchs d'une journée d'un championnat.\n Il est également possible de voir l'historique des différents paris effectués.",
-    "description_section_2": "en cours....",
+    "description_section_1": "Ce projet consiste en la création d'une plateforme de paris sportifs en ligne. Les utilisateurs peuvent visualiser les matchs à venir, consulter les classements actualisés et, en fonction de leurs préférences, effectuer des paris sur les résultats des rencontres des 5 plus grands championnats d'Europe.",
+    "description_section_2": "L'objectif principal de cette application est d'offrir aux utilisateurs une plateforme complète de paris sportif, à savoir l'analyse des paris et le paris sur le même site. Les utilisateurs peuvent facilement consulter l'historique de leurs paris passés et prendre des décisions en fonctions pour leurs futures mises.",
+    "description_section_3": "Ce projet a permis de développer des compétences techniques dans plusieurs domaines. Le backend, en Python, se divise entre l'API et le web scraping pour récupérer les classements et résultats des matchs. Deux bases de données sont utilisées : la relationnelle pour stocker les informations des utilisateurs et des paris, et la non relationnelle pour afficher les classements des équipes, évitant ainsi de refaire du web scraping, car ces données changent seulement une ou deux fois par semaine. L'interface utilisateur a été conçue avec Vue.js."
+  },
+  "project_details_3": {
+    "description_section_1": "Cet assistant d'agent immobilier à Calgary a pour objectif d'accompagner les agents en proposant une estimation rapide de la valeur des biens en fonction de critères tels que la surface du terrain, la localisation, le nombre de chambres, etc...",
+    "description_section_2": "L'objectif principal de cette application est d'offrir aux utilisateurs une plateforme complète de paris sportif, à savoir l'analyse des paris et le paris sur le même site. Les utilisateurs peuvent facilement consulter l'historique de leurs paris passés et prendre des décisions en fonctions pour leurs futures mises.",
     "description_section_3": "en cours..."
   }
 }
