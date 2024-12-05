@@ -18,7 +18,7 @@
           <img
             :src="Mac_Mockup"
             alt="Project Image"
-            class="h-auto w-full object-contain"
+            class="object-contain h-[20rem] md:h-[35rem] w-auto"
           />
         </div>
 
@@ -98,9 +98,9 @@
 
       <div class="flex flex-col space-y-20 md:space-y-0">
         <div
-          class="flex flex-col-reverse md:flex-row items-center justify-between"
+          class="flex flex-col-reverse md:flex-row items-center justify-center"
         >
-          <div class="flex flex-col w-full items-start space-y-5">
+          <div class="flex flex-col w-full items-start space-y-5 max-w-[30rem]">
             <Telescope :size="40" />
             <h3 class="font-bold text-2xl md:text-4xl">
               {{ $t("project_details.title_section_1") }}
@@ -118,7 +118,7 @@
 
         <div class="flex flex-col md:flex-row items-center justify-between">
           <img :src="illustrationGoal" class="h-[20rem] md:h-[35rem] w-auto" />
-          <div class="flex flex-col w-full items-start space-y-5">
+          <div class="flex flex-col w-full items-start space-y-5 max-w-[30rem]">
             <Target :size="40" />
             <h3 class="font-bold text-2xl md:text-4xl">
               {{ $t("project_details.title_section_2") }}
@@ -132,7 +132,7 @@
         <div
           class="flex flex-col-reverse md:flex-row items-center justify-between"
         >
-          <div class="flex flex-col w-full items-start space-y-5">
+          <div class="flex flex-col w-full items-start space-y-5 max-w-[30rem]">
             <BrainCog :size="40" />
             <h3 class="font-bold text-2xl md:text-4xl">
               {{ $t("project_details.title_section_3") }}

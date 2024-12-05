@@ -1,7 +1,7 @@
 <template>
   <div class="mx-auto m-0 w-5/6">
     <div class="flex flex-col md:flex-row justify-center center-item w-full">
-      <div class="flex flex-col justify-center items-center w-full md:w-[60%]">
+      <div class="flex flex-col justify-center items-center md:max-w-[40rem]">
         <div class="text-center md:text-start space-y-10">
           <h1
             class="text-3xl md:text-7xl font-bold tracking-wide leading-tight"
@@ -28,7 +28,7 @@
           </p>
         </div>
         <div class="w-full mt-10">
-          <div class="flex flex-row justify-evenly items-center justify-center">
+          <div class="flex flex-row justify-center items-center justify-center">
             <SocialNetwork />
             <img :src="franceLogo" alt="France logo" class="h-auto w-[40px]" />
           </div>
