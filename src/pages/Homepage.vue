@@ -4,7 +4,7 @@
       <div class="flex flex-col justify-center items-center md:max-w-[40rem]">
         <div class="text-center md:text-start space-y-10">
           <h1
-            class="text-3xl md:text-7xl font-bold tracking-wide leading-tight"
+            class="text-3xl md:text-6xl font-bold tracking-wide leading-tight"
           >
             {{ $t("home.title_1") }}<br />
             <span class="relative">
@@ -182,12 +182,6 @@ export default {
     Skill,
     ProjectTool,
     SocialNetwork,
-  },
-  methods: {
-    triggerExplosionFromParent() {
-      // Accéder à la méthode triggerExplosion dans l'enfant via le ref
-      this.$refs.child.triggerExplosion();
-    },
   },
   data() {
     return {

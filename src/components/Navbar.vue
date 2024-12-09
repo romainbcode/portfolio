@@ -33,10 +33,14 @@ export default {
   name: "Navbar",
   setup() {
     const { locale, t } = useI18n();
-    //const router = useRouter();
+    const router = useRouter();
 
     const changeLanguage = (langue: string) => {
       locale.value = langue;
+      localStorage.setItem("language", langue);
+      router.push({
+        name: "Home",
+      });
     };
 
     const showFlag = computed<string>(() => {
@@ -50,7 +54,6 @@ export default {
       }
     });
 
-    //router.push("/");
     return { changeLanguage, showFlag };
   },
 };

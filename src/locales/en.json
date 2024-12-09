@@ -13,7 +13,8 @@
     "title_section_1": "Skills",
     "button_softskill": "See soft Skills",
     "button_hardskill": "See hard Skills",
-    "title_section_2": "Projects"
+    "title_section_2": "Projects",
+    "subtitle_section_4": "All of my personal projects, along with the technologies used and a presentation video."
   },
   "buttons_label": {
     "github": "See the code"
@@ -35,6 +36,11 @@
     "description": "Sports betting application displaying match results and standings for Europe's 5 major championships via web scraping, and allowing you to place bets.",
     "label": "web"
   },
+  "project_3": {
+    "title": "Real Estate Assistant",
+    "description": "Calgary real estate agent assistant providing property value estimates based on various criteria.",
+    "label": "web"
+  },
   "project_details": {
     "technical_stack": "Technical stack",
     "tools": "Tools",
@@ -45,13 +51,18 @@
     "subtitle_section_4": "Video offering an overview of the application to discover its features"
   },
   "project_details_1": {
-    "description_section_1": "in progress...",
-    "description_section_2": "in progress...",
-    "description_section_3": "in progress..."
+    "description_section_1": "Created as part of my final year project, EduVolution is an online training application that allows teachers to create and manage courses. Students follow the courses at their own pace and can assess their progress through quizzes, all linked to various Google services.",
+    "description_section_2": "EduVolution aims to provide a flexible platform for managing online training. It allows teachers to track students' progress, automate certain tasks (such as sending emails), and personalize the learning experience through an intelligent chatbot. The integration of external services like Google Calendar and Google Classroom simplifies the management of schedules and content.",
+    "description_section_3": "The project allowed me to develop skills in creating microservices with Node.js and Python, in artificial intelligence with LLaMA-2, in security with Auth0, and in managing Google APIs. The development of the interface with React.js and data management through MongoDB also strengthened my skills in web development and databases."
   },
   "project_details_2": {
-    "description_section_1": "in progress...",
-    "description_section_2": "in progress...",
-    "description_section_3": "in progress..."
+    "description_section_1": "This project involves creating an online sports betting platform. Users can view upcoming matches, check updated standings, and, depending on their preferences, place bets on the outcomes of games in the 5 major European leagues.",
+    "description_section_2": "The main goal of this application is to provide users with a comprehensive sports betting platform, offering both betting analysis and the ability to place bets on the same site. Users can easily access the history of their past bets and make decisions for their future wagers based on this information.",
+    "description_section_3": "This project allowed me to develop technical skills in several areas. The backend, built with Python, is split between the API and web scraping to retrieve match results and standings. Two databases are used: a relational one to store user and betting information, and a non-relational one to display team standings, avoiding the need to re-scrape data since these standings only change once or twice a week. The user interface was designed with Vue.js."
+  },
+  "project_details_3": {
+    "description_section_1": "Cet assistant d'agent immobilier à Calgary a pour objectif d'accompagner les agents en proposant une estimation rapide de la valeur des biens en fonction de critères tels que la surface du terrain, la localisation, le nombre de chambres, etc...",
+    "description_section_2": "L'objectif principal de cette application est d'offrir aux utilisateurs une plateforme complète de paris sportif, à savoir l'analyse des paris et le paris sur le même site. Les utilisateurs peuvent facilement consulter l'historique de leurs paris passés et prendre des décisions en fonctions pour leurs futures mises.",
+    "description_section_3": "en cours..."
   }
 }

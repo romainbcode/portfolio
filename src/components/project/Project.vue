@@ -67,7 +67,7 @@
 </template>
 
 <script lang="ts">
-import { ref, computed } from "vue";
+import { ref, computed, watch } from "vue";
 import { useRouter } from "vue-router";
 
 import { ToolName } from "@/enums/ToolColor";
@@ -161,30 +161,37 @@ export default {
 
     const router = useRouter();
     const projectStore = useProjectStore();
-    const { t } = useI18n();
+    const { t, locale } = useI18n();
+
+    const currentProject = computed(() => ({
+      logo: props.photo,
+      url: props.url,
+      titre: t("project_" + props.id + ".title"),
+      label: props.label,
+      tools: props.tools,
+      skills: props.skills,
+      descriptionPresentation: t(
+        "project_details_" + props.id + ".description_section_1"
+      ),
+      descriptionObjectifs: t(
+        "project_details_" + props.id + ".description_section_2"
+      ),
+      descriptionCompetences: t(
+        "project_details_" + props.id + ".description_section_3"
+      ),
+      video: props.video,
+      illustrationGoal: props.illustrationGoal,
+      illustrationPresentation: props.illustrationPresentation,
+      illustrationStudying: props.illustrationStudying,
+    }));
+
+    watch(locale, () => {
+      console.log("coucou", locale);
+      projectStore.setCurrentProject(currentProject.value);
+    });
+
     const navigateToDetail = () => {
-      console.log("props : ", props);
-      projectStore.setCurrentProject({
-        logo: props.photo,
-        url: props.url,
-        titre: t("project_" + props.id + ".title"),
-        label: props.label,
-        tools: props.tools,
-        skills: props.skills,
-        descriptionPresentation: t(
-          "project_details_" + props.id + ".description_section_1"
-        ),
-        descriptionObjectifs: t(
-          "project_details_" + props.id + ".description_section_2"
-        ),
-        descriptionCompetences: t(
-          "project_details_" + props.id + ".description_section_3"
-        ),
-        video: props.video,
-        illustrationGoal: props.illustrationGoal,
-        illustrationPresentation: props.illustrationPresentation,
-        illustrationStudying: props.illustrationStudying,
-      });
+      projectStore.setCurrentProject(currentProject.value);
 
       router.push({
         name: "ProjectDetail",
