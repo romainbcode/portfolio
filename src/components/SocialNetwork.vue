@@ -53,7 +53,7 @@
     <li class="icon-content">
       <a
         :href="CV"
-        download="CV_Romain.pdf"
+        download="CV_RomainBIZOT.pdf"
         aria-label="CV"
         data-social="cv"
         target="_blank"
