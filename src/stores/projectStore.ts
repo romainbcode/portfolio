@@ -13,6 +13,7 @@ export const useProjectStore = defineStore("project", {
       descriptionObjectifs: "",
       descriptionCompetences: "",
       video: "",
+      mockup: "",
       illustrationGoal: "",
       illustrationPresentation: "",
       illustrationStudying: "",

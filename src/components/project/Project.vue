@@ -139,6 +139,10 @@ export default {
       type: String,
       required: true,
     },
+    mockup: {
+      type: String,
+      required: true,
+    },
     illustrationGoal: {
       type: String,
       required: true,
@@ -180,6 +184,7 @@ export default {
         "project_details_" + props.id + ".description_section_3"
       ),
       video: props.video,
+      mockup: props.mockup,
       illustrationGoal: props.illustrationGoal,
       illustrationPresentation: props.illustrationPresentation,
       illustrationStudying: props.illustrationStudying,

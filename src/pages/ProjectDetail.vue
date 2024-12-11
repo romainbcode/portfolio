@@ -16,7 +16,7 @@
       <div class="flex flex-col md:flex-row justify-center mb-6">
         <div class="w-full md:w-[50%] flex items-center justify-center">
           <img
-            :src="Mac_Mockup"
+            :src="mockup"
             alt="Project Image"
             class="object-contain h-[20rem] md:h-[35rem] w-auto"
           />
@@ -210,8 +210,6 @@ import { BrainCog } from "lucide-vue-next";
 import { ToolName } from "@/enums/ToolColor";
 import { SkillName } from "@/enums/SkillColor";
 
-import Mac_Mockup from "@/assets/mac_mockup.png";
-
 export default {
   components: {
     Projectlabel,
@@ -243,7 +241,6 @@ export default {
       },
       { immediate: true }
     );
-    console.log(project.value);
     return {
       logo: computed(() => project.value.logo),
       url: computed(() => project.value.url),
@@ -259,12 +256,12 @@ export default {
         () => project.value.descriptionCompetences
       ),
       video: computed(() => project.value.video),
+      mockup: computed(() => project.value.mockup),
       illustrationGoal: computed(() => project.value.illustrationGoal),
       illustrationPresentation: computed(
         () => project.value.illustrationPresentation
       ),
       illustrationStudying: computed(() => project.value.illustrationStudying),
-      Mac_Mockup,
     };
   },
   methods: {

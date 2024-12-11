@@ -66,7 +66,7 @@
       <div class="h-[4rem]"></div>
 
       <div class="flex-col mb-10 w-2/3">
-        <div class="my-4 grid gap-4 flex justify-center">
+        <div class="my-4 grid gap-10 flex justify-center">
           <Project
             :id="'1'"
             :photo="PFE"
@@ -86,10 +86,11 @@
               { name: SkillName.GoogleApis },
               { name: SkillName.Trello },
             ]"
+            :mockup="MacMockupEduvolution"
             :illustrationGoal="IllustrationEduvolutionGoal"
             :illustrationPresentation="IllustrationEduvolutionPresentation"
             :illustrationStudying="IllustrationEduvolutionStudying"
-            :video="PFE_video"
+            :video="VideoEduvolution"
           />
 
           <Project
@@ -113,15 +114,16 @@
               { name: SkillName.MicroServices },
               { name: SkillName.WebScraping },
             ]"
+            :mockup="MacMockupPari"
             :illustrationGoal="IllustrationPariGoal"
             :illustrationPresentation="IllustrationPariPresentation"
             :illustrationStudying="IllustrationPariStudying"
-            :video="PFE_video"
+            :video="VideoPari"
           />
 
           <Project
             :id="'3'"
-            :photo="PFE"
+            :photo="LogoIAAgentImmob"
             :url="'https://github.com/romainbcode/TP_Projet_AgentImmobilierIA'"
             :label="$t('project_3.label')"
             :title="$t('project_3.title')"
@@ -136,10 +138,11 @@
               { name: SkillName.MicroServices },
               { name: SkillName.Git },
             ]"
+            :mockup="MacMockupIAAgentImmobGoal"
             :illustrationGoal="IllustrationIAAgentImmobGoal"
             :illustrationPresentation="IllustrationIAAgentImmobPresentation"
             :illustrationStudying="IllustrationIAAgentImmobStudying"
-            :video="PFE_video"
+            :video="VideoEduvolution"
           />
         </div>
       </div>
@@ -156,21 +159,26 @@ import { Vue3Marquee } from "vue3-marquee";
 import franceLogo from "@/assets/france_logo.png";
 import pari from "@/assets/project_logo/pari.png";
 import PFE from "@/assets/project_logo/PFE.png";
+import LogoIAAgentImmob from "@/assets/project_logo/IA-AgentImmob.png";
 
 import Project from "@/components/project/Project.vue";
 import ProjectTool from "@/components/project/Projecttool.vue";
 import Skill from "@/components/skill/Skill.vue";
 import SocialNetwork from "@/components/SocialNetwork.vue";
 
+import MacMockupEduvolution from "@/assets/mac_mockup/mac_mockup_Eduvolution.png";
 import IllustrationEduvolutionGoal from "@/assets/illustrations_Eduvolution/illustration_Eduvolution_goal.png";
 import IllustrationEduvolutionPresentation from "@/assets/illustrations_Eduvolution/illustration_Eduvolution_presentation.png";
 import IllustrationEduvolutionStudying from "@/assets/illustrations_Eduvolution/illustration_Eduvolution_studying.png";
-import PFE_video from "@/assets/project_video/PFE.mp4";
+import VideoEduvolution from "@/assets/project_video/PFE.mp4";
 
+import MacMockupPari from "@/assets/mac_mockup/mac_mockup_Pari.png";
 import IllustrationPariGoal from "@/assets/illustrations_Pari/illustration_Pari_goal.png";
 import IllustrationPariPresentation from "@/assets/illustrations_Pari/illustration_Pari_presentation.png";
 import IllustrationPariStudying from "@/assets/illustrations_Pari/illustration_Pari_studying.png";
+import VideoPari from "@/assets/project_video/Pari.mp4";
 
+import MacMockupIAAgentImmobGoal from "@/assets/mac_mockup/mac_mockup_IA-AgentImmob.png";
 import IllustrationIAAgentImmobGoal from "@/assets/illustrations_IA-AgentImmob/illustration_IA-AgentImmob_goal.png";
 import IllustrationIAAgentImmobPresentation from "@/assets/illustrations_IA-AgentImmob/illustration_IA-AgentImmob_presentation.png";
 import IllustrationIAAgentImmobStudying from "@/assets/illustrations_IA-AgentImmob/illustration_IA-AgentImmob_studying.png";
@@ -250,15 +258,20 @@ export default {
       franceLogo,
       pari,
       PFE,
+      LogoIAAgentImmob,
       ToolName,
       SkillName,
-      PFE_video,
+      VideoEduvolution,
+      MacMockupEduvolution,
       IllustrationEduvolutionGoal,
       IllustrationEduvolutionPresentation,
       IllustrationEduvolutionStudying,
+      VideoPari,
+      MacMockupPari,
       IllustrationPariGoal,
       IllustrationPariPresentation,
       IllustrationPariStudying,
+      MacMockupIAAgentImmobGoal,
       IllustrationIAAgentImmobGoal,
       IllustrationIAAgentImmobPresentation,
       IllustrationIAAgentImmobStudying,
