@@ -142,7 +142,7 @@
             :illustrationGoal="IllustrationIAAgentImmobGoal"
             :illustrationPresentation="IllustrationIAAgentImmobPresentation"
             :illustrationStudying="IllustrationIAAgentImmobStudying"
-            :video="VideoEduvolution"
+            :video="VideoIAAgentImmob"
           />
         </div>
       </div>
@@ -182,6 +182,7 @@ import MacMockupIAAgentImmobGoal from "@/assets/mac_mockup/mac_mockup_IA-AgentIm
 import IllustrationIAAgentImmobGoal from "@/assets/illustrations_IA-AgentImmob/illustration_IA-AgentImmob_goal.png";
 import IllustrationIAAgentImmobPresentation from "@/assets/illustrations_IA-AgentImmob/illustration_IA-AgentImmob_presentation.png";
 import IllustrationIAAgentImmobStudying from "@/assets/illustrations_IA-AgentImmob/illustration_IA-AgentImmob_studying.png";
+import VideoIAAgentImmob from "@/assets/project_video/IA-AgentImmob.mp4";
 
 export default {
   components: {
@@ -271,6 +272,7 @@ export default {
       IllustrationPariGoal,
       IllustrationPariPresentation,
       IllustrationPariStudying,
+      VideoIAAgentImmob,
       MacMockupIAAgentImmobGoal,
       IllustrationIAAgentImmobGoal,
       IllustrationIAAgentImmobPresentation,
